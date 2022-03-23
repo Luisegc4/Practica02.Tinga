@@ -1,2 +1,3 @@
-id,nombres,ApellidoPaterno,ApellidoMaterno,CURP,estado,calle,numero,CodigoPostal,telefono,FechaNacimiento,email
-00,Luis Emilio,Gonzalez,Covarrubias,GOCL010530HDFNVSA5,CDMX,Heroes,185,06300,5511189086,30/05/2001,luisegc@ciencias.unam.mx
+id,nombres,ApellidoPaterno,ApellidoMaterno,CURP,estado,calle,numero,CodigoPostal,telefono,FechaNacimientoemail
+00,Luis Emilio,Gonzalez,Covarrubias,GOCL010530HDFNVSA5,CDMX,Heroes,185,06300,5511189086,30/05/2001luisegc@ciencias.unam.mx
+01,LuisMario,Escobar,Rosales,CurpLuisMario,estado,calle,numero,CodigoPostal,TElefonoLuisMario,22/12/2002luisescobar@ciencias.unam.mx

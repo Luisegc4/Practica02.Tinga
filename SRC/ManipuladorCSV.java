@@ -1,4 +1,4 @@
-//package SRC;
+package SRC;
 import java.io.*;
 import java.util.LinkedList;
 
@@ -46,7 +46,7 @@ public class ManipuladorCSV {
      * @param ArchivoDondeSeGuarda lista con las lineas en String que se escribiran en el csv
      * @return String con el archivo donde se guarda la lista
      *  */
-    public String EscribeCsv(LinkedList<String> listaAEscribir,String ArchivoDondeSeGuarda){
+    public String EscribeCsv(LinkedList<String> listaAEscribir, String ArchivoDondeSeGuarda){
         BufferedWriter bw ;
         String Nombre = ArchivoDondeSeGuarda;
         try{
@@ -62,5 +62,21 @@ public class ManipuladorCSV {
         }
         return Nombre;
     }
+    public String EscribeCsvPersonas(LinkedList<Persona> listaAEscribir, String ArchivoDondeSeGuarda){
+        ManipuladorListas manipuladorListas = new ManipuladorListas();
+        EscribeCsv(manipuladorListas.PersonasAString(listaAEscribir),ArchivoDondeSeGuarda);
+        return ArchivoDondeSeGuarda;
+    }
+    public String EscribeCsvVeterinarias(LinkedList<Veterinaria> listaAEscribir, String ArchivoDondeSeGuarda){
+        ManipuladorListas manipuladorListas = new ManipuladorListas();
+        EscribeCsv(manipuladorListas.VeterinariasAString(listaAEscribir),ArchivoDondeSeGuarda);
+        return ArchivoDondeSeGuarda;
+    }
+    public String EscribeCsvMascotas(LinkedList<Mascota> listaAEscribir, String ArchivoDondeSeGuarda){
+        ManipuladorListas manipuladorListas = new ManipuladorListas();
+        EscribeCsv(manipuladorListas.MascotasAString(listaAEscribir),ArchivoDondeSeGuarda);
+        return ArchivoDondeSeGuarda;
+    }
+
 
 }
