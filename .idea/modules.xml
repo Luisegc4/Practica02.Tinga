@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/SRC/SRC/.iml" filepath="$PROJECT_DIR$/SRC/SRC/.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Practica02.Tinga.iml" filepath="$PROJECT_DIR$/.idea/Practica02.Tinga.iml" />
     </modules>
   </component>
