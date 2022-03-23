@@ -6,6 +6,16 @@ public class Direccion {
     String numero;
     String CodigoPostal;
 
+    public Direccion() {
+    }
+
+    public Direccion(String estado, String calle, String numero, String codigoPostal) {
+        this.estado = estado;
+        this.calle = calle;
+        this.numero = numero;
+        CodigoPostal = codigoPostal;
+    }
+
     public String getEstado() {
         return estado;
     }

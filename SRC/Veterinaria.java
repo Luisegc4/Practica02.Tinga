@@ -12,6 +12,15 @@ public class Veterinaria {
     public Veterinaria(){
     }
 
+    public Veterinaria(String nombre, String consultorios, String apartado, String telefono, String horario, Direccion direccion) {
+        this.nombre = nombre;
+        this.consultorios = consultorios;
+        this.apartado = apartado;
+        this.telefono = telefono;
+        this.horario = horario;
+        this.direccion = direccion;
+    }
+
     public String getNombre() {
         return nombre;
     }
