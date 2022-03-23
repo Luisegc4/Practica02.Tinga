@@ -6,13 +6,13 @@ public class Veterinaria {
     String consultorios;
     String apartado;
     String telefono;
-    String horario;
+    Horario horario;
     Direccion direccion;
 
     public Veterinaria(){
     }
 
-    public Veterinaria(String nombre, String consultorios, String apartado, String telefono, String horario, Direccion direccion) {
+    public Veterinaria(String nombre, String consultorios, String apartado, String telefono, Horario horario, Direccion direccion) {
         this.nombre = nombre;
         this.consultorios = consultorios;
         this.apartado = apartado;
@@ -37,7 +37,7 @@ public class Veterinaria {
         return telefono;
     }
 
-    public String getHorario() {
+    public Horario getHorario() {
         return horario;
     }
 
@@ -61,7 +61,7 @@ public class Veterinaria {
         this.apartado = apartado;
     }
 
-    public void setHorario(String horario) {
+    public void setHorario(Horario horario) {
         this.horario = horario;
     }
 
@@ -69,4 +69,8 @@ public class Veterinaria {
         this.direccion = direccion;
     }
 
+    @Override
+    public String toString() {
+        return nombre + "," +  consultorios + "," + apartado + "," + telefono + "," + horario.toString() +","+direccion.toString();
+    }
 }

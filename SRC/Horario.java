@@ -27,4 +27,9 @@ public class Horario {
     public void setHoraFin(String horaFin) {
         HoraFin = horaFin;
     }
+
+    @Override
+    public String toString() {
+        return HoraFin +","+ HoraFin;
+    }
 }

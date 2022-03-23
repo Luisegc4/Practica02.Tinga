@@ -4,22 +4,24 @@ import java.util.Date;
 
 public class Mascota{
 String nombre;
+String apodo;
 String peso;
 String edad;
 Date FechaNacimiento;
 String raza;
-Persona persona;
+String idPersona;
 
     public Mascota() {
     }
 
-    public Mascota(String nombre, String peso, String edad, Date fechaNacimiento, String raza, Persona persona) {
+    public Mascota(String nombre, String apodo, String peso, String edad, Date fechaNacimiento, String raza, String idpersona) {
         this.nombre = nombre;
+        this.apodo = apodo;
         this.peso = peso;
         this.edad = edad;
         FechaNacimiento = fechaNacimiento;
         this.raza = raza;
-        this.persona = persona;
+        this.idPersona = idpersona;
     }
 
     public String getNombre() {
@@ -28,6 +30,14 @@ Persona persona;
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getApodo() {
+        return apodo;
+    }
+
+    public void setApodo(String apodo) {
+        this.apodo = apodo;
     }
 
     public String getPeso() {
@@ -62,11 +72,16 @@ Persona persona;
         this.raza = raza;
     }
 
-    public Persona getPersona() {
-        return persona;
+    public String getIdPersona() {
+        return idPersona;
     }
 
-    public void setPersona(Persona persona) {
-        this.persona = persona;
+    public void setIdPersona(String idPersona) {
+        this.idPersona = idPersona;
+    }
+
+    @Override
+    public String toString() {
+        return nombre +","+apodo +","+peso+","+edad+","+FechaNacimiento.toString()+","+raza+","+ idPersona.toString();
     }
 }

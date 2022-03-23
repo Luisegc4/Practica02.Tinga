@@ -97,4 +97,9 @@ public class Persona {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    @Override
+    public String toString() {
+        return id + "," + Nombres + "," + ApellidoPaterno + "," + ApellidoMaterno + "," + CURP + "," +direccion.toString() +","+ telefono + "," +FechaNacimiento.toString() + email;
+    }
 }

@@ -47,4 +47,9 @@ public class Direccion {
     public void setCodigoPostal(String codigoPostal) {
         CodigoPostal = codigoPostal;
     }
+
+    @Override
+    public String toString() {
+        return estado + "," + calle +","+numero +","+CodigoPostal;
+    }
 }
