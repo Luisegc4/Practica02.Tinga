@@ -1,19 +1,33 @@
 package SRC;
 
+import java.util.Date;
+
 public class Persona {
     String id;
-
-
-
     String Nombres;
-
-
-
     String ApellidoPaterno;
     String ApellidoMaterno;
     String CURP;
     Direccion direccion;
     String telefono;
+    Date FechaNacimiento;
+    String email;
+
+    public Persona() {
+    }
+
+    public Persona(String id, String nombres, String apellidoPaterno, String apellidoMaterno, String CURP, Direccion direccion, String telefono, Date fechaNacimiento, String email) {
+        this.id = id;
+        Nombres = nombres;
+        ApellidoPaterno = apellidoPaterno;
+        ApellidoMaterno = apellidoMaterno;
+        this.CURP = CURP;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        FechaNacimiento = fechaNacimiento;
+        this.email = email;
+    }
+
     public String getId() {
         return id;
     }
@@ -66,5 +80,21 @@ public class Persona {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+
+    public Date getFechaNacimiento() {
+        return FechaNacimiento;
+    }
+
+    public void setFechaNacimiento(Date fechaNacimiento) {
+        FechaNacimiento = fechaNacimiento;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
