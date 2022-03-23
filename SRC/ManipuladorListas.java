@@ -1,20 +1,31 @@
-package SRC;
-
+//package SRC;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.LinkedList;
 
 public class ManipuladorListas {
+    public ManipuladorListas() {
+    }
+
     public LinkedList<Persona> LeePersonas(LinkedList<String> LectorCsv) throws ParseException {
+        System.out.println("Paso 0");
         LinkedList<Persona> listaPersonas= new LinkedList<>();
+        System.out.println("Paso 1");
         for (String linea:LectorCsv) {
+            System.out.println("Paso 2");
             String[] arr = linea.split(",");
+            System.out.println("Paso 3");
             Direccion direccion = new Direccion(arr[5],arr[6],arr[7],arr[8]);
-            Date date = new SimpleDateFormat("dd/MM/yyyy").parse(arr[10]);
-            Persona persona = new Persona(arr[0],arr[1],arr[2],arr[3],arr[4],direccion,arr[9],date,arr[11]);
+            System.out.println("Paso 4");
+            System.out.println("Paso 5");
+            Persona persona = new Persona(arr[0],arr[1],arr[2],arr[3],arr[4],direccion,arr[9],arr[10],arr[11]);
+            System.out.println("Paso 6");
             listaPersonas.add(persona);
+            System.out.println("Paso 7");
         }
+        System.out.println("Paso 8");
+
         return listaPersonas;
     }
     public LinkedList<Veterinaria> LeeVeterinaria(LinkedList<String> LectorCsv){
@@ -32,8 +43,7 @@ public class ManipuladorListas {
         LinkedList<Mascota> listaMascotas = new LinkedList<>();
         for (String linea:LectorCsv) {
             String[] arr = linea.split(",");
-            Date date = new SimpleDateFormat("dd/MM/yyyy").parse(arr[4]);
-            Mascota mascota = new Mascota(arr[0],arr[1],arr[2],arr[3],date,arr[5],arr[6]);
+            Mascota mascota = new Mascota(arr[0],arr[1],arr[2],arr[3],arr[4],arr[5]);
             listaMascotas.add(mascota);
         }
         return listaMascotas;

@@ -1,5 +1,4 @@
-package SRC;
-
+//package SRC;
 public class Horario {
     String HoraInicio;
     String HoraFin;

@@ -1,6 +1,5 @@
-package SRC;
+//package SRC;
 
-import java.util.Date;
 
 public class Persona {
     String id;
@@ -10,13 +9,13 @@ public class Persona {
     String CURP;
     Direccion direccion;
     String telefono;
-    Date FechaNacimiento;
+    String FechaNacimiento;
     String email;
 
     public Persona() {
     }
 
-    public Persona(String id, String nombres, String apellidoPaterno, String apellidoMaterno, String CURP, Direccion direccion, String telefono, Date fechaNacimiento, String email) {
+    public Persona(String id, String nombres, String apellidoPaterno, String apellidoMaterno, String CURP, Direccion direccion, String telefono, String fechaNacimiento, String email) {
         this.id = id;
         Nombres = nombres;
         ApellidoPaterno = apellidoPaterno;
@@ -82,11 +81,11 @@ public class Persona {
         this.telefono = telefono;
     }
 
-    public Date getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return FechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
+    public void setFechaNacimiento(String fechaNacimiento) {
         FechaNacimiento = fechaNacimiento;
     }
 
@@ -101,5 +100,6 @@ public class Persona {
     @Override
     public String toString() {
         return id + "," + Nombres + "," + ApellidoPaterno + "," + ApellidoMaterno + "," + CURP + "," +direccion.toString() +","+ telefono + "," +FechaNacimiento.toString() + email;
+        //TODO: Casteo Fecha a String
     }
 }

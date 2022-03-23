@@ -1,9 +1,9 @@
-package SRC;
+//package SRC;
 
 public class Veterinaria {
 
     String nombre;
-    String consultorios;
+    String consultorios; //TODO: Poner menor o igual a 4
     String apartado;
     String telefono;
     Horario horario;

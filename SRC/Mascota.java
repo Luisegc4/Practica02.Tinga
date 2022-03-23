@@ -1,22 +1,19 @@
-package SRC;
+//package SRC;
 
-import java.util.Date;
 
 public class Mascota{
-String nombre;
-String apodo;
-String peso;
-String edad;
-Date FechaNacimiento;
-String raza;
-String idPersona;
+    String nombre;
+    String peso;
+    String edad;
+    String FechaNacimiento;
+    String raza;
+    String idPersona;
 
     public Mascota() {
     }
 
-    public Mascota(String nombre, String apodo, String peso, String edad, Date fechaNacimiento, String raza, String idpersona) {
+    public Mascota(String nombre, String peso, String edad, String fechaNacimiento, String raza, String idpersona) {
         this.nombre = nombre;
-        this.apodo = apodo;
         this.peso = peso;
         this.edad = edad;
         FechaNacimiento = fechaNacimiento;
@@ -30,14 +27,6 @@ String idPersona;
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public String getApodo() {
-        return apodo;
-    }
-
-    public void setApodo(String apodo) {
-        this.apodo = apodo;
     }
 
     public String getPeso() {
@@ -56,11 +45,11 @@ String idPersona;
         this.edad = edad;
     }
 
-    public Date getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return FechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
+    public void setFechaNacimiento(String fechaNacimiento) {
         FechaNacimiento = fechaNacimiento;
     }
 
@@ -82,6 +71,6 @@ String idPersona;
 
     @Override
     public String toString() {
-        return nombre +","+apodo +","+peso+","+edad+","+FechaNacimiento.toString()+","+raza+","+ idPersona.toString();
+        return nombre +","+peso+","+edad+","+FechaNacimiento.toString()+","+raza+","+ idPersona.toString();
     }
 }

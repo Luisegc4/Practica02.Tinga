@@ -1,5 +1,4 @@
-package SRC;
-
+//package SRC;
 import java.io.*;
 import java.util.LinkedList;
 
@@ -12,14 +11,17 @@ public class ManipuladorCSV {
     public LinkedList<String> LeeArchivoCsv(String ArchivoCsv){
         LinkedList<String> lista = new LinkedList<>();
         BufferedReader bufferLectura = null;
-        try {
 
-            bufferLectura = new BufferedReader(new FileReader( ArchivoCsv));
+        try {
+            bufferLectura = new BufferedReader(new FileReader(ArchivoCsv));
             String linea1 = bufferLectura.readLine();
+
             while (linea1 != null) {
+
                 lista.add(linea1);
                 linea1 = bufferLectura.readLine();
             }
+
         }catch (IOException e) {
             e.printStackTrace();
             System.out.println("Usted sera redirigido al menu");
@@ -60,4 +62,5 @@ public class ManipuladorCSV {
         }
         return Nombre;
     }
+
 }
