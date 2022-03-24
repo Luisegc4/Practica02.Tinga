@@ -58,10 +58,54 @@ public class Menu {
                 lista =menuEntidades("Modificar");
                 instancia = Visualizar(lista);
                 indice = Seleccion();
+                switch (instancia){
+                    case "Persona":
+
+                        manipuladorCSV.EscribeCsv(manipuladorListas.PersonasAString(lista),ArchivoPersonas);
+                        break;
+                    case "Mascota":
+
+                        manipuladorCSV.EscribeCsv(manipuladorListas.MascotasAString(lista),ArchivoMascotas);
+                        break;
+                    case "Veterinaria":
+
+                        manipuladorCSV.EscribeCsv(manipuladorListas.VeterinariasAString(lista),ArchivoVeterinarias);
+                        break;
+                    default:
+                        System.out.println("Opcion no valida");
+                        menu();
+                        break;
+                }
+
                 menu();
                 break;
             case 3:
                 lista =menuEntidades("Agregar");
+                instancia = Visualizar(lista);
+                indice = Seleccion();
+                switch (instancia){
+                    case "Persona":
+
+                        manipuladorCSV.EscribeCsv(manipuladorListas.PersonasAString(lista),ArchivoPersonas);
+                        break;
+                    case "Mascota":
+
+                        manipuladorCSV.EscribeCsv(manipuladorListas.MascotasAString(lista),ArchivoMascotas);
+                        break;
+                    case "Veterinaria":
+
+                        manipuladorCSV.EscribeCsv(manipuladorListas.VeterinariasAString(lista),ArchivoVeterinarias);
+                        break;
+                    default:
+                        System.out.println("Opcion no valida");
+                        menu();
+                        break;
+                }
+                menu();
+
+                break;
+            case 4:
+                lista =menuEntidades("Eliminar");
                 instancia = Visualizar(lista);
                 indice = Seleccion();
                 switch (instancia){
@@ -85,13 +129,7 @@ public class Menu {
                 menu();
 
                 break;
-            case 4:
-                lista =menuEntidades("Eliminar");
-                instancia = Visualizar(lista);
-                indice = Seleccion();
-                menu();
 
-                break;
             case 5:
                 System.exit(0);
             default:
@@ -205,5 +243,85 @@ public class Menu {
             entrada =Seleccion();
         }
         return entrada;
+    }
+    public void ModificarPersonas(LinkedList lista, int indice){
+        LinkedList<Persona>listaPersonas = (LinkedList<Persona>) lista;
+        int elegir=0;
+        String entrada;
+        System.out.println("Selecciona el atributo a modificar:");
+        System.out.println("1.-Regresar al menu \n" +
+                "2.-Nombres\n" +
+                "3.-ApellidoPaterno\n" +
+                "4.-ApellidoMaterno\n" +
+                "5.-CURP\n" +
+                "6.-direccion\n" +
+                "7.-telefono\n" +
+                "8.-FechaNacimiento\n" +
+                "9.-email\n" +
+                "Introduzca su seleccion: ");
+        elegir = scanner.nextInt();
+        switch (elegir){
+            case 1:
+                menu();
+                break;
+            case 2:
+                System.out.println("Introduce el(los) Nombre(s):");
+                entrada = scanner.nextLine();
+                listaPersonas.get(indice).setNombres(entrada);
+                break;
+            case 3:
+                System.out.println("Introduce el Apellido Paterno:");
+
+                entrada = scanner.nextLine();
+                listaPersonas.get(indice).setApellidoPaterno(entrada);
+                break;
+            case 4:
+                System.out.println("Introduce el Apellido Materno:");
+                entrada = scanner.nextLine();
+                listaPersonas.get(indice).setApellidoMaterno(entrada);
+                break;
+            case 5:
+                System.out.println("Introduce el CURP:");
+                entrada = scanner.nextLine();
+                listaPersonas.get(indice).setCURP(entrada);
+                break;
+            case 6:
+                System.out.println("Introduce el estado:");
+                entrada = scanner.nextLine();
+                Direccion direccion = new Direccion();
+                direccion.setEstado(entrada);
+                System.out.println("Introduce la calle:");
+                entrada = scanner.nextLine();
+                direccion.setCalle(entrada);
+                System.out.println("Introduce el numero:");
+                entrada = scanner.nextLine();
+                direccion.setNumero(entrada);
+                System.out.println("Introduce el codigo postal:");
+                entrada = scanner.nextLine();
+                direccion.setCodigoPostal(entrada);
+                listaPersonas.get(indice).setDireccion(direccion);
+                break;
+            case 7:
+                System.out.println("Introduce el Telefono:");
+                entrada = scanner.nextLine();
+                listaPersonas.get(indice).setTelefono(entrada);
+                break;
+            case 8:
+                System.out.println("Introduce la fecha de nacimiento:");
+                entrada = scanner.nextLine();
+                listaPersonas.get(indice).setFechaNacimiento(entrada);
+                break;
+            case 9:
+                System.out.println("Introduce el Email:");
+                entrada = scanner.nextLine();
+                listaPersonas.get(indice).setEmail(entrada);
+                break;
+        }
+    }
+    public void ModificarMascotas(LinkedList lista, int indice){
+        String instancia = Visualizar(lista);
+    }
+    public void ModificarVeterinarias(LinkedList lista, int indice){
+        String instancia = Visualizar(lista);
     }
 }
