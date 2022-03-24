@@ -10,6 +10,7 @@ public class Menu {
     String ArchivoVeterinarias;
     ManipuladorCSV manipuladorCSV;
     ManipuladorListas manipuladorListas;
+    Validacion validacion;
     Scanner scanner;
     public Menu() {
         String Path = "SRC/";
@@ -20,8 +21,8 @@ public class Menu {
         manipuladorCSV = new ManipuladorCSV();
         manipuladorListas = new ManipuladorListas();
         scanner = new Scanner(System.in);
+        validacion = new Validacion();
     }
-
     public void menu(){
         int entrada=0;
         int seleccion =0;
