@@ -1,6 +1,6 @@
 package SRC;
 
-
+//hola
 public class Mascota{
     String nombre;
     String peso;
