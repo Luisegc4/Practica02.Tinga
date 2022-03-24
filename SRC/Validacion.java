@@ -1,3 +1,13 @@
+/**
+ * Clase que Valida que ciertos datos tengan una entrada correcta 
+ * @author Luis Emilio Gonzalez Covarrubias
+ * @author Luis Mario Escobar Rosales 
+ * @author Melissa Vázquez González
+ * @author Genaro de Jesús Miranda Martinez
+ * @author Maria del Sol Silva Hernández
+ * @version 23/03/2022
+ */
+
 package SRC;
 
 
@@ -14,6 +24,13 @@ public class Validacion {
     public static final Pattern VALID_EMAIL_ADDRESS_REGEX =
             Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
 
+    
+    
+   /**
+    * Metodo que normaliza una cadena pal , eliminando caracteres invalidos como emojis,y quitano espacios en blanco, haciendo uso de regex  
+    * @param pal cadena a normalizar 
+    * @return pal cadena normalizada 
+    */
     public static String normaliza(String pal){
         if (pal.isEmpty()){
             return "is empty";
@@ -41,6 +58,13 @@ public class Validacion {
         }
         return pal;
     }
+    
+   /**
+    * Metodo que valida que una Persona sea valida, verificando que sus atributos sean correctos 
+    * @param person persona a verificar  
+    * @return true en caso de ser una persona valida, false en caso contrario 
+    */
+    
     public boolean ValidacionPersona(Persona persona){
         if (persona ==null){
             return false;
@@ -60,6 +84,12 @@ public class Validacion {
         }
         return true;
     }
+    
+    /**
+    * Metodo que valida que una Mascota  sea valida, verificando que sus atributos sean correctos 
+    * @param mascota mascota a verificar  
+    * @return true en caso de ser una mascota valida, false en caso contrario 
+    */
     public boolean ValidacionMascota(Mascota mascota){
         if (mascota == null) return false;
         if (!ValidacionNombre(mascota.getNombre())) return false;
@@ -69,6 +99,12 @@ public class Validacion {
         if (!ValidacionNombre(mascota.getRaza())) return false;
         return true;
     }
+    
+   /**
+    * Metodo que valida que una Veterinaria  sea valida, verificando que sus atributos sean correctos 
+    * @param veterinaria veterinaria a verificar  
+    * @return true en caso de ser una mascota valida, false en caso contrario 
+    */
     public boolean ValidacionVeterinaria(Veterinaria veterinaria){
         if (veterinaria==null) return false;
         if (!ValidacionNombre(veterinaria.getNombre()))return false;
@@ -83,6 +119,13 @@ public class Validacion {
         if (veterinaria.getHorario()==null) return false;
         return true;
     }
+    
+    /**
+    * Metodo que valida que una cadena str  sea un nombre valida,
+    * normaliza la cadena, y verifica si tiene caracteres invalidos 
+    * @param str cadena  a verificar  
+    * @return true en caso de ser un nombre  valido, false en caso contrario 
+    */
     public boolean ValidacionNombre(String str){
         String strNormalizado = normaliza(str);
         if(strNormalizado.equals("isempty")||strNormalizado.equals("contains invalid characters")){
@@ -90,6 +133,13 @@ public class Validacion {
         }
         return true;
     }
+    
+   /**
+    * Metodo que valida que una cadena str  sea un telefono valid,
+    * normaliza la cadena, y verifica si tiene caracteres que sean distintos de numeros  
+    * @param str cadena  a verificar  
+    * @return true en caso de ser un telefono valida, false en caso contrario 
+    */
     public boolean ValidacionTelefono(String str){
         Matcher matcher = VALID_PHONE_ADDRESS_REGEX.matcher(str);
         return matcher.find();
