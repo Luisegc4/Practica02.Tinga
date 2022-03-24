@@ -2,9 +2,9 @@
  * Clase que modela una Mascota 
  * @author Luis Emilio Gonzalez Covarrubias
  * @author Luis Mario Escobar Rosales 
- * @author Melissa Vázquez González
- * @author Genaro de Jesús Miranda Martinez
- * @author Maria del Sol Silva Hernández
+ * @author Melissa Vazquez Gonzalez
+ * @author Genaro de Jesus Miranda Martinez
+ * @author Maria del Sol Silva Hernandez
  * @version 23/03/2022
  */
 package SRC;
@@ -17,13 +17,13 @@ public class Mascota{
     String idPersona;
     
     /**
-     * Constructor por omisión
+     * Constructor por omision
      */
     public Mascota() {
     }
     
     /**
-     * Constructor por parámetros que genera una Mascota
+     * Constructor por parametros que genera una Mascota
      * @param  nombre -- nombre de la mascota
      * @param  peso -- peso de la mascota
      * @param  edad  -- edad de la mascota
@@ -42,7 +42,7 @@ public class Mascota{
     }
 
    /**
-    * Método getNombre que obtiene el nombre de la mascota.
+    * Metodo getNombre que obtiene el nombre de la mascota.
     * @return nombre -- regresa el nombre de la mascota. 
     */
     public String getNombre() {
@@ -50,14 +50,14 @@ public class Mascota{
     }
     
    /**
-    * Método setNombre que define el nuevo nombre de la mascota. 
+    * Metodo setNombre que define el nuevo nombre de la mascota. 
     * @param  nombre -- El nuevo nombre de la mascota.
     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
     /**
-    * Método getPeso que obtiene el peso de la mascota.
+    * Metodo getPeso que obtiene el peso de la mascota.
     * @return peso -- regresa el peso de la mascota. 
     */
     public String getPeso() {
@@ -65,7 +65,7 @@ public class Mascota{
     }
 
     /**
-    * Método setPeso que modifica   el nuevo peso de la mascota. 
+    * Metodo setPeso que modifica   el nuevo peso de la mascota. 
     * @param  peso -- el nuevo peso de la mascota 
     */
     public void setPeso(String peso) {
@@ -74,7 +74,7 @@ public class Mascota{
 
     
    /**
-    * Método getEdad que obtiene la edad de la mascota.
+    * Metodo getEdad que obtiene la edad de la mascota.
     * @return edad -- regresa la edad  de la mascota. 
     */  
     public String getEdad() {
@@ -82,7 +82,7 @@ public class Mascota{
     }
 
    /**
-    * Método setEdad que modifica  la edad  de la mascota. 
+    * Metodo setEdad que modifica  la edad  de la mascota. 
     * @param  edad -- modifica la edad de la mascota 
     */
     public void setEdad(String edad) {
@@ -90,7 +90,7 @@ public class Mascota{
     }
 
    /**
-    * Método getFechaNacimiento que obtiene la fecha de nacimiento  de la mascota.
+    * Metodo getFechaNacimiento que obtiene la fecha de nacimiento  de la mascota.
     * @return  edad -- regresa la edad  de la mascota. 
     */      
     public String getFechaNacimiento() {
@@ -99,7 +99,7 @@ public class Mascota{
 
     
    /**
-    * Método setFechaNacimiento que modifica  la fecha de nacimiento  de la mascota. 
+    * Metodo setFechaNacimiento que modifica  la fecha de nacimiento  de la mascota. 
     * @param  fechaNacimiento -- modifica la fecha de nacimiento  de la mascota 
     */
     public void setFechaNacimiento(String fechaNacimiento) {
@@ -107,7 +107,7 @@ public class Mascota{
     }
     
    /**
-    * Método getRaza que obtiene la raza  de la mascota.
+    * Metodo getRaza que obtiene la raza  de la mascota.
     * @return  raza -- regresa la edad  de la mascota. 
     */  
     public String getRaza() {
@@ -115,7 +115,7 @@ public class Mascota{
     }
 
    /**
-    * Método setRaza que modifica  la raza de   de la mascota. 
+    * Metodo setRaza que modifica  la raza de   de la mascota. 
     * @param raza -- modifica la raza de la mascota   de la mascota 
     */
     public void setRaza(String raza) {
@@ -124,7 +124,7 @@ public class Mascota{
 
     
    /**
-    * Método getIdPersona que obtiene  el identificador del dueño   de la mascota.
+    * Metodo getIdPersona que obtiene  el identificador del dueño   de la mascota.
     * @return IdPersona -- regresa el identificador del dueño   de la mascota. 
     */ 
     public String getIdPersona() {
@@ -133,7 +133,7 @@ public class Mascota{
 
     
    /**
-    * Método setIdPersona que modifica  el Id del dueño de la mascota. 
+    * Metodo setIdPersona que modifica  el Id del dueño de la mascota. 
     * @param  idPersona -- modifica el identificador del dueño de la mascota
     */
     public void setIdPersona(String idPersona) {
@@ -141,7 +141,7 @@ public class Mascota{
     }
 
    /**
-    * Método toString que regresa un string que representa a la mascota . 
+    * Metodo toString que regresa un string que representa a la mascota . 
     * @return modelo de la mascota   
     */
     @Override

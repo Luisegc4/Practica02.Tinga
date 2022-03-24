@@ -2,9 +2,9 @@
  * Clase que modela una persona 
  * @author Luis Emilio Gonzalez Covarrubias
  * @author Luis Mario Escobar Rosales 
- * @author Melissa Vázquez González
- * @author Genaro de Jesús Miranda Martinez
- * @author Maria del Sol Silva Hernández
+ * @author Melissa Vazquez Gonzalez
+ * @author Genaro de Jesus Miranda Martinez
+ * @author Maria del Sol Silva Hernandez
  * @version 23/03/2022
  */
 
@@ -25,13 +25,13 @@ public class Persona {
 
 
         /**
-        * Constructor por omisión
+        * Constructor por omision
         */
     public Persona() {
     }
 
     /**
-     * Constructor por parámetros que genera una Persona
+     * Constructor por parametros que genera una Persona
      * 
      * @param  id -- id de la persona
      * @param  nombres -- nombres de la persona
@@ -56,7 +56,7 @@ public class Persona {
     }
 
     /**
-    * Método getId que obtiene el ID de la persona.
+    * Metodo getId que obtiene el ID de la persona.
     * @return id -- regresa el id de la persona. 
     */
     public String getId() {
@@ -64,7 +64,7 @@ public class Persona {
     }
 
     /**
-    * Método setId que define el nuevo id de la persona. 
+    * Metodo setId que define el nuevo id de la persona. 
     * @param  id -- El nuevo id de la persona.
     */
     public void setId(String id) {
@@ -72,7 +72,7 @@ public class Persona {
     }
 
     /**
-    * Método getNombres que obtiene los nombres de la persona.
+    * Metodo getNombres que obtiene los nombres de la persona.
     * @return nombres -- regresa los nombres de la persona. 
     */
     public String getNombres() {
@@ -80,7 +80,7 @@ public class Persona {
     }
 
     /**
-    * Método setNombres que define los nuevos nombres de la persona. 
+    * Metodo setNombres que define los nuevos nombres de la persona. 
     * @param  nombres -- Los nuevos nombres de la persona.
     */
     public void setNombres(String nombres) {
@@ -88,7 +88,7 @@ public class Persona {
     }
 
     /**
-    * Método getApellidoPaterno que obtiene el Apellido paterno de la persona.
+    * Metodo getApellidoPaterno que obtiene el Apellido paterno de la persona.
     * @return ApellidoPaterno -- regresa el Apellido Paterno de la persona. 
     */
     public String getApellidoPaterno() {
@@ -96,7 +96,7 @@ public class Persona {
     }
 
     /**
-     * Método setApellidoPaterno que define el apellido paterno de la persona. 
+     * Metodo setApellidoPaterno que define el apellido paterno de la persona. 
      * @param apellidoPaterno -- El Apellido Paterno de la persona. 
      */
     public void setApellidoPaterno(String apellidoPaterno) {
@@ -104,7 +104,7 @@ public class Persona {
     }
     
     /**
-    * Método getApellidoMaterno que obtiene el apellido materno de la persona.
+    * Metodo getApellidoMaterno que obtiene el apellido materno de la persona.
     * @return ApellidoMaterno -- regresa el apellido materno de la persona. 
     */
     public String getApellidoMaterno() {
@@ -112,7 +112,7 @@ public class Persona {
     }
 
     /**
-     * Método setApellidoMaterno que define el apellido materno de la persona. 
+     * Metodo setApellidoMaterno que define el apellido materno de la persona. 
      * @param apellidoMaterno -- El apellido materno de la persona. 
      */
     public void setApellidoMaterno(String apellidoMaterno) {
@@ -121,7 +121,7 @@ public class Persona {
 
 
     /**
-    * Método getCURP que obtiene el CURP de la persona.
+    * Metodo getCURP que obtiene el CURP de la persona.
     * @return CURP -- regresa el CURP de la persona. 
     */
     public String getCURP() {
@@ -129,7 +129,7 @@ public class Persona {
     }
 
     /**
-    * Método setCURP que define el CURP de la persona.
+    * Metodo setCURP que define el CURP de la persona.
     * @param CURP -- el nuevo CURP de la persona. 
     */
     public void setCURP(String CURP) {
@@ -137,14 +137,14 @@ public class Persona {
     }
 
     /**
-    * Método getDireccion que obtiene la direccion de la persona.
+    * Metodo getDireccion que obtiene la direccion de la persona.
     * @return direccion -- regresa el direccion de la persona. 
     */
     public Direccion getDireccion() {
         return direccion;
     }
     /**
-    * Método setDireccion que define la direccion de la persona.
+    * Metodo setDireccion que define la direccion de la persona.
     * @param direccion -- la nueva direccion de la persona. 
     */
     public void setDireccion(Direccion direccion) {
@@ -152,7 +152,7 @@ public class Persona {
     }
 
     /**
-    * Método getTelefono que obtiene el telefono de la persona.
+    * Metodo getTelefono que obtiene el telefono de la persona.
     * @return telefono -- regresa el telefono de la persona. 
     */
     public String getTelefono() {
@@ -160,7 +160,7 @@ public class Persona {
     }
 
     /**
-    * Método setTelefono que define el telefono de la persona.
+    * Metodo setTelefono que define el telefono de la persona.
     * @param telefono -- El nuevo teleono de la persona. 
     */
     public void setTelefono(String telefono) {
@@ -168,7 +168,7 @@ public class Persona {
     }
 
     /**
-    * Método getFechaNacimiento que obtiene la fecha de nacimiento de la persona.
+    * Metodo getFechaNacimiento que obtiene la fecha de nacimiento de la persona.
     * @return FechaNacimiento -- regresa la fecha de nacimiento de la persona. 
     */
     public String getFechaNacimiento() {
@@ -176,7 +176,7 @@ public class Persona {
     }
 
     /**
-    * Método setFechaNacimiento que define la fecha de nacimiento de la persona.
+    * Metodo setFechaNacimiento que define la fecha de nacimiento de la persona.
     * @param fechaNacimiento -- La fecha de nacimiento de la persona. 
     */
     public void setFechaNacimiento(String fechaNacimiento) {
@@ -184,7 +184,7 @@ public class Persona {
     }
 
     /**
-    * Método getEmail que obtiene el email de la persona.
+    * Metodo getEmail que obtiene el email de la persona.
     * @return email -- regresa el email de la persona. 
     */
     public String getEmail() {
@@ -192,7 +192,7 @@ public class Persona {
     }
 
     /**
-    * Método setEmail que define el email de la persona.
+    * Metodo setEmail que define el email de la persona.
     * @param email -- El nuevo email de la persona. 
     */
     public void setEmail(String email) {
@@ -200,7 +200,7 @@ public class Persona {
     }
 
     /**
-    * Método toString que regresa un string que representa a la persona . 
+    * Metodo toString que regresa un string que representa a la persona . 
     * @return modelo de la persona   
     */
     @Override

@@ -1,10 +1,10 @@
 /**
  * Clase que modela una Veterinaria 
  * @author Luis Emilio Gonzalez Covarrubias
- * @author Luis Mario Escobar Rosales 
- * @author Melissa Vázquez González
- * @author Genaro de Jesús Miranda Martinez
- * @author Maria del Sol Silva Hernández
+ * @author Luis Mario Escobar Rosales
+ * @author Melissa Vazquez Gonzalez
+ * @author Genaro de Jesus Miranda Martinez
+ * @author Maria del Sol Silva Hernandez
  * @version 23/03/2022
  */
 package SRC;
@@ -19,17 +19,17 @@ public class Veterinaria {
     Direccion direccion;
 
     /**
-     * Constructor por omisión
+     * Constructor por omision
      */
     public Veterinaria(){
     }
     
     
     /**
-     * Constructor por parámetros que genera una Veterinaria
+     * Constructor por parametros que genera una Veterinaria
      * @param  nombre -- nombre de la veterinaria 
      * @param  consultorios -- consultorios de la veterinaria 
-     * @param  apartado  -- apartado para poder cuidar  a la mascota 
+     * @param  apartado  -- apartado para poder cuidar a la mascota
      * @param  telefono -- telefono de la veterinaria 
      * @param  horario -- horario de la veterinaria
      * @param  direccion -- direccion de la veterinaria 
@@ -45,7 +45,7 @@ public class Veterinaria {
     }
 
    /**
-    * Método getNombre obtiene el nombre de la veterinaria 
+    * Metodo getNombre obtiene el nombre de la veterinaria 
     * @return nombre -- regresa el nombre de la veterinaria . 
     */
     public String getNombre() {
@@ -53,7 +53,7 @@ public class Veterinaria {
     }
 
    /**
-    * Método getConsultorios obtiene los consultorios de la veterinaria 
+    * Metodo getConsultorios obtiene los consultorios de la veterinaria 
     * @return consultorios -- regresa los consultorios  de la veterinaria . 
     */
     public String getConsultorios() {
@@ -61,7 +61,7 @@ public class Veterinaria {
     }
 
    /**
-    * Método getApartado obtiene el apartado de la veterinaria 
+    * Metodo getApartado obtiene el apartado de la veterinaria 
     * @return apartados -- regresa el apartado  de la veterinaria . 
     */    
     public String getApartado() {
@@ -69,7 +69,7 @@ public class Veterinaria {
     }
 
    /**
-    * Método getTelefono obtiene el telefono de la veterinaria 
+    * Metodo getTelefono obtiene el telefono de la veterinaria 
     * @return telefono -- regresa el telefono  de la veterinaria . 
     */  
     public String getTelefono() {
@@ -77,7 +77,7 @@ public class Veterinaria {
     }
     
    /**
-    * Método getHorario obtiene el horario de la veterinaria 
+    * Metodo getHorario obtiene el horario de la veterinaria 
     * @return horario -- regresa el horraio  de la veterinaria . 
     */ 
     public Horario getHorario() {
@@ -85,7 +85,7 @@ public class Veterinaria {
     }
 
    /**
-    * Método getDireccion obtiene la direccion de la veterinaria 
+    * Metodo getDireccion obtiene la direccion de la veterinaria 
     * @return direccion -- regresa la direccion de la veterinaria . 
     */ 
     public Direccion getDireccion() {
@@ -93,7 +93,7 @@ public class Veterinaria {
     }
     
    /**
-    * Método setNombres que define el nuevo nombre de la veterinaria. 
+    * Metodo setNombres que define el nuevo nombre de la veterinaria. 
     * @param  nombre -- El nuevo nombre de la veterinaria.
     */
     public void setNombres(String nombre) {
@@ -101,7 +101,7 @@ public class Veterinaria {
     }
 
    /**
-    * Método setTelefono que define el nuevo telefono de la veterinaria. 
+    * Metodo setTelefono que define el nuevo telefono de la veterinaria. 
     * @param  telefono -- El nuevo telefono de la veterinaria.
     */
     public void setTelefono(String telefono) {
@@ -109,7 +109,7 @@ public class Veterinaria {
     }
 
    /**
-    * Método setConsultorio que define el nuevo consultario de la veterinaria. 
+    * Metodo setConsultorio que define el nuevo consultario de la veterinaria. 
     * @param  consultorio -- El nuevo consultorio de la veterinaria.
     */
     public void setConsultorio(String consultorio) {
@@ -117,7 +117,7 @@ public class Veterinaria {
     }
 
     /**
-    * Método setApartado que define el nuevo apartado de la veterinaria. 
+    * Metodo setApartado que define el nuevo apartado de la veterinaria. 
     * @param  apartado -- El nuevo apartado de la veterinaria.
     */
     public void setApartado(String apartado) {
@@ -125,7 +125,7 @@ public class Veterinaria {
     }
 
    /**
-    * Método setHorario que define el nuevo horario de la veterinaria. 
+    * Metodo setHorario que define el nuevo horario de la veterinaria. 
     * @param  horario -- El nuevo horario de la veterinaria.
     */
     public void setHorario(Horario horario) {
@@ -133,7 +133,7 @@ public class Veterinaria {
     }
 
     /**
-    * Método setDireccion que define la nueva direccion de la veterinaria. 
+    * Metodo setDireccion que define la nueva direccion de la veterinaria. 
     * @param  direccion --La nueva  direccion  de la veterinaria.
     */
     public void setDireccion(Direccion direccion) {
@@ -141,7 +141,7 @@ public class Veterinaria {
     }
     
     /**
-    * Método toString que regresa un string que representa a la veterinaria  . 
+    * Metodo toString que regresa un string que representa a la veterinaria  . 
     * @return modelo de la veterinaria 
     */
     @Override

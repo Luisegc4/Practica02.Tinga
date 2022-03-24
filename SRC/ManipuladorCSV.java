@@ -1,10 +1,10 @@
 /**
- * Clase que Manipula archivos CSV  
+ * ManipuladorCSV Clase que Manipula archivos CSV
  * @author Luis Emilio Gonzalez Covarrubias
  * @author Luis Mario Escobar Rosales 
- * @author Melissa Vázquez González
- * @author Genaro de Jesús Miranda Martinez
- * @author Maria del Sol Silva Hernández
+ * @author Melissa Vazquez Gonzalez
+ * @author Genaro de Jesus Miranda Martinez
+ * @author Maria del Sol Silva Hernandez
  * @version 23/03/2022
  */
 package SRC;

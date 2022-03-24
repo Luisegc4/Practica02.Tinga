@@ -2,9 +2,9 @@
  * Clase que representa   un Horario 
  * @author Luis Emilio Gonzalez Covarrubias
  * @author Luis Mario Escobar Rosales 
- * @author Melissa Vázquez González
- * @author Genaro de Jesús Miranda Martinez
- * @author Maria del Sol Silva Hernández
+ * @author Melissa Vazquez Gonzalez
+ * @author Genaro de Jesus Miranda Martinez
+ * @author Maria del Sol Silva Hernandez
  * @version 23/03/2022
  */
 package SRC;
@@ -13,7 +13,7 @@ public class Horario {
     String HoraFin;
     
     /**
-     * Constructor por parámetros que genera un horario
+     * Constructor por parametros que genera un horario
      * @param  horaInicio -- hora de inicio 
      * @param  horaFin -- hora de finalizacion 
      */
@@ -23,13 +23,13 @@ public class Horario {
     }
     
    /**
-    * Constructor por omisión
+    * Constructor por omision
     */
     public Horario() {
     }
     
    /**
-    * Método getHoraInicio obtiene la hora de inicio 
+    * Metodo getHoraInicio obtiene la hora de inicio 
     * @return HoraInicio -- regresa la hora de inicio del horario . 
     */
     public String getHoraInicio() {
@@ -37,7 +37,7 @@ public class Horario {
     }
  
    /**
-    * Método setHoraInicio define la nueva  hora de inicio 
+    * Metodo setHoraInicio define la nueva  hora de inicio 
     * @param horaInicio -- actualiza la hora de inicio del horario .
     */
     public void setHoraInicio(String horaInicio) {
@@ -45,7 +45,7 @@ public class Horario {
     }
 
    /**
-    * Método getHoraoFin obtiene la hora de finalizacion 
+    * Metodo getHoraoFin obtiene la hora de finalizacion 
     * @return HoraFin -- regresa la hora de finalizacion del horario. 
     */
     public String getHoraFin() {
@@ -54,7 +54,7 @@ public class Horario {
 
     
     /**
-    * Método setHoraFin define la nueva  hora de finalizacion 
+    * Metodo setHoraFin define la nueva  hora de finalizacion 
     * @param horaFin -- actualiza la hora de finalizacion del horario .
     */
     public void setHoraFin(String horaFin) {
@@ -62,7 +62,7 @@ public class Horario {
     }
     
    /**
-    * Método toString que regresa un string que representa el horario  . 
+    * Metodo toString que regresa un string que representa el horario  . 
     * @return modelo string del horario
     */
     @Override
