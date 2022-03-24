@@ -1,3 +1,14 @@
+/**
+ * Clase que modela una Mascota 
+ * @author Luis Emilio Gonzalez Covarrubias
+ * @author Luis Mario Escobar Rosales 
+ * @author Melissa Vázquez González
+ * @author Genaro de Jesús Miranda Martinez
+ * @author Maria del Sol Silva Hernández
+ * @version 23/03/2022
+ */
+
+
 package SRC;
 
 
@@ -12,9 +23,26 @@ public class Persona {
     String FechaNacimiento;
     String email;
 
+
+        /**
+        * Constructor por omisión
+        */
     public Persona() {
     }
 
+    /**
+     * Constructor por parámetros que genera una Persona
+     * 
+     * @param  id -- id de la persona
+     * @param  Nombres -- nombres de la persona
+     * @param  ApellidoPaterno -- Apellido Paterno de la persona
+     * @param  ApellidoMaterno -- Apellido Materno de la persona
+     * @param  CURP -- CURP de la persona
+     * @param  direccion -- direccion de la persona
+     * @param  edad  -- edad de la persona
+     * @param  fechaNacimiento -- fecha de nacimiento de la persona
+     * @param  raza -- raza de la mascota
+     */
     public Persona(String id, String nombres, String apellidoPaterno, String apellidoMaterno, String CURP, Direccion direccion, String telefono, String fechaNacimiento, String email) {
         this.id = id;
         Nombres = nombres;
