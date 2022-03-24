@@ -1,6 +1,13 @@
+/**
+ * Clase que modela una Mascota 
+ * @author Luis Emilio Gonzalez Covarrubias
+ * @author Luis Mario Escobar Rosales 
+ * @author Melissa Vázquez González
+ * @author Genaro de Jesús Miranda Martinez
+ * @author Maria del Sol Silva Hernández
+ * @version 23/03/2022
+ */
 package SRC;
-
-//hola
 public class Mascota{
     String nombre;
     String peso;
@@ -8,9 +15,21 @@ public class Mascota{
     String FechaNacimiento;
     String raza;
     String idPersona;
-
+    
+    /**
+     * Constructor por omisión
+     */
     public Mascota() {
     }
+    
+    /**
+     * Constructor por parámetros que genera una Mascota
+     * @param String nombre -- nombre de la mascota 
+     * @param String peso -- peso de la mascota
+     * @param String edad  -- edad de la mascota 
+     * @param String fechaNacimiento -- fecha de nacimiento de la mascota 
+     * @param String raza -- raza de la mascota 
+     */
 
     public Mascota(String nombre, String peso, String edad, String fechaNacimiento, String raza, String idpersona) {
         this.nombre = nombre;
