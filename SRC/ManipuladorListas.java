@@ -1,13 +1,18 @@
 package SRC;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
 import java.util.LinkedList;
 
 public class ManipuladorListas {
     public ManipuladorListas() {
     }
 
+    /**
+     *
+     * @param LectorCsv
+     * @return
+     * @throws ParseException
+     */
     public LinkedList<Persona> LeePersonas(LinkedList<String> LectorCsv) throws ParseException {
         LinkedList<Persona> listaPersonas= new LinkedList<>();
         for (String linea:LectorCsv) {

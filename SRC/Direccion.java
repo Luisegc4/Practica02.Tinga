@@ -1,5 +1,4 @@
 package SRC;
-//hola
 public class Direccion {
     String estado;
     String calle;
@@ -9,6 +8,7 @@ public class Direccion {
     public Direccion() {
     }
 
+
     public Direccion(String estado, String calle, String numero, String codigoPostal) {
         this.estado = estado;
         this.calle = calle;
@@ -16,9 +16,11 @@ public class Direccion {
         CodigoPostal = codigoPostal;
     }
 
+
     public String getEstado() {
         return estado;
     }
+
 
     public void setEstado(String estado) {
         this.estado = estado;
