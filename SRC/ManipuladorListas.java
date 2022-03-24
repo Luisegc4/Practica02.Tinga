@@ -23,7 +23,7 @@ public class ManipuladorListas {
      * Método que recibe una lista de string y devuelve una lista de personas.
      * @param LectorCsv -- lista de strings que se leyeron del archivoCSV
      * @return listaPersonas -- La lista de personas
-     * @throws ParseException
+     * @throws ParseException --Tira Expcepecion de Parseo
      */
     public LinkedList<Persona> LeePersonas(LinkedList<String> LectorCsv) throws ParseException {
         LinkedList<Persona> listaPersonas= new LinkedList<>();
@@ -58,7 +58,7 @@ public class ManipuladorListas {
      * Método que recibe una lista de string y devuelve una lista de mascotas.
      * @param LectorCsv -- lista de strings que se leyeron del archivoCSV
      * @return listaMascotas -- La lista de mascotas
-     * @throws ParseException
+     * @throws ParseException --Tira Expcepecion de Parseo
      */
     public LinkedList<Mascota> LeeMascota(LinkedList<String> LectorCsv) throws ParseException {
         LinkedList<Mascota> listaMascotas = new LinkedList<>();
@@ -90,9 +90,9 @@ public class ManipuladorListas {
      * @param listaVeterinarias -- lista que contiene las veterinarias
      * @return listaAescribir -- lista a escribir de las veterinarias
      */
-    public LinkedList<String> VeterinariasAString(LinkedList<Veterinaria>listapersonas){
+    public LinkedList<String> VeterinariasAString(LinkedList<Veterinaria>listaVeterinarias){
         LinkedList<String> listaAescribir = new LinkedList<>();
-        for (Veterinaria veterinaria:listapersonas) {
+        for (Veterinaria veterinaria:listaVeterinarias) {
             listaAescribir.add(veterinaria.toString());
         }
         return listaAescribir;
@@ -104,9 +104,9 @@ public class ManipuladorListas {
      * @param listaMascotas -- lista que contiene las mascotas
      * @return listaAescribir -- lista a escribir de las mascotas
      */
-    public LinkedList<String> MascotasAString(LinkedList<Mascota>listapersonas){
+    public LinkedList<String> MascotasAString(LinkedList<Mascota>listaMascotas){
         LinkedList<String> listaAescribir = new LinkedList<>();
-        for (Mascota mascotas:listapersonas) {
+        for (Mascota mascotas:listaMascotas) {
             listaAescribir.add(mascotas.toString());
         }
         return listaAescribir;

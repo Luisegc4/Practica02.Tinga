@@ -34,13 +34,13 @@ public class Persona {
      * Constructor por parámetros que genera una Persona
      * 
      * @param  id -- id de la persona
-     * @param  Nombres -- nombres de la persona
-     * @param  ApellidoPaterno -- Apellido Paterno de la persona
-     * @param  ApellidoMaterno -- Apellido Materno de la persona
+     * @param  nombres -- nombres de la persona
+     * @param  apellidoPaterno -- Apellido Paterno de la persona
+     * @param  apellidoMaterno -- Apellido Materno de la persona
      * @param  CURP -- CURP de la persona
      * @param  direccion -- direccion de la persona
      * @param  telefono -- telefono de la persona
-     * @param  FechaNacimiento -- fecha de nacimiento de la persona
+     * @param  fechaNacimiento -- fecha de nacimiento de la persona
      * @param  email -- email de la persona
      */
     public Persona(String id, String nombres, String apellidoPaterno, String apellidoMaterno, String CURP, Direccion direccion, String telefono, String fechaNacimiento, String email) {

@@ -1,7 +1,6 @@
 package SRC;
 import java.text.ParseException;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
@@ -12,6 +11,10 @@ public class Menu {
     ManipuladorListas manipuladorListas;
     Validacion validacion;
     Scanner scanner;
+    Scanner scanner2;
+    Scanner scanner3;
+    int contador1;
+
     public Menu() {
         String Path = "SRC/";
 //        String Path = "";
@@ -21,129 +24,148 @@ public class Menu {
         manipuladorCSV = new ManipuladorCSV();
         manipuladorListas = new ManipuladorListas();
         scanner = new Scanner(System.in);
+        scanner2 = new Scanner(System.in);
         validacion = new Validacion();
+        contador1=0;
     }
     public void menu(){
-        int entrada=0;
-        int seleccion =0;
-        String instancia="";
-        int indice=0;
-        LinkedList lista;
-        System.out.println("Ah continuacion se le presentara el menu: \n" +
-                "Teclee la opcion de su preferencia: \n" +
-                "1.- Visualizar \n" +
-                "2.- Modificar \n" +
-                "3.- Agregar \n" +
-                "4.- Eliminar \n" +
-                "5.-Salir"
-        );try{
-            entrada = scanner.nextInt();
-        }catch(java.util.InputMismatchException i){
-            System.out.println("Usted no ha introducido un entero\n" +
-                    "Sera redirigido al menu");
-            menu();
+        try{
+            if(contador1>0){
+                System.out.println("Abriendo Menu... Si tarda presione enter hasta abrir");
+                String entrada2 = scanner.nextLine();
+            }
 
-        }
-        if(entrada>5||entrada<1){
-            System.out.println("El Entero que introdujo no esta en rango, favor de introducir uno entre 1 y 4 \n"
-                    + "Porfavor lee las instrucciones");
-            menu();
-        }
-        switch (entrada){
-            case 1:
-                lista =menuEntidades("Visualizar");
-                instancia = Visualizar(lista);
-                menu();
-                break;
-            case 2:
-                lista =menuEntidades("Modificar");
-                instancia = Visualizar(lista);
-                indice = Seleccion();
-                switch (instancia){
-                    case "Persona":
-                        lista = ModificarPersonas(lista,indice);
-                        manipuladorCSV.EscribeCsv(manipuladorListas.PersonasAString(lista),ArchivoPersonas);
-                        break;
-                    case "Mascota":
-                        lista = ModificarMascotas(lista,indice);
+            int entrada=0;
+            int seleccion =0;
+            String instancia="";
+            int indice=0;
+            LinkedList lista;
+            try{
+            System.out.println("Ah continuacion se le presentara el menu: \n" +
+                    "Teclee la opcion de su preferencia: \n" +
+                    "1.- Visualizar \n" +
+                    "2.- Modificar \n" +
+                    "3.- Agregar \n" +
+                    "4.- Eliminar \n" +
+                    "5.-Salir"
+            );
+                entrada = scanner.nextInt();
 
-                        manipuladorCSV.EscribeCsv(manipuladorListas.MascotasAString(lista),ArchivoMascotas);
-                        break;
-                    case "Veterinaria":
-                        lista = ModificarVeterinarias(lista,indice);
 
-                        manipuladorCSV.EscribeCsv(manipuladorListas.VeterinariasAString(lista),ArchivoVeterinarias);
-                        break;
-                    default:
-                        System.out.println("Opcion no valida");
-                        menu();
-                        break;
-                }
+            }catch(Exception i){
+                System.out.println("Usted no ha introducido un entero\n" +
+                        "Sera redirigido al menu");
+                contador1++;
+//                System.exit(0);
                 menu();
-                break;
-            case 3:
-                lista =menuEntidades("Agregar");
-                instancia = Visualizar(lista);
-                switch (instancia){
-                    case "Persona":
-                    System.out.println("Agregue los datos de su dueño a continuacion:");
-                    lista =AgregarPersona(lista);
-                        manipuladorCSV.EscribeCsv(manipuladorListas.PersonasAString(lista),ArchivoPersonas);
-                        break;
-                    case "Mascota":
-                        lista = AgregarMascota(lista);
-                        manipuladorCSV.EscribeCsv(manipuladorListas.MascotasAString(lista),ArchivoMascotas);
-                        break;
-                    case "Veterinaria":
-                        lista = AgregaVeterinaria(lista);
-                        manipuladorCSV.EscribeCsv(manipuladorListas.VeterinariasAString(lista),ArchivoVeterinarias);
-                        break;
-                    default:
-                        System.out.println("Opcion no valida");
-                        menu();
-                        break;
-                }
-                menu();
-
-                break;
-            case 4:
-                lista =menuEntidades("Eliminar");
-                instancia = Visualizar(lista);
-                indice = Seleccion();
-                switch (instancia){
-                    case "Persona":
-                        lista.remove(indice);
-                        manipuladorCSV.EscribeCsv(manipuladorListas.PersonasAString(lista),ArchivoPersonas);
-                        break;
-                    case "Mascota":
-                        lista.remove(indice);
-                        manipuladorCSV.EscribeCsv(manipuladorListas.MascotasAString(lista),ArchivoMascotas);
-                        break;
-                    case "Veterinaria":
-                        lista.remove(indice);
-                        manipuladorCSV.EscribeCsv(manipuladorListas.VeterinariasAString(lista),ArchivoVeterinarias);
-                        break;
-                    default:
-                        System.out.println("Opcion no valida");
-                        menu();
-                        break;
-                }
-                menu();
-                break;
-            case 5:
-                System.exit(0);
-            default:
+            }
+            if(entrada>5||entrada<1){
                 System.out.println("El Entero que introdujo no esta en rango, favor de introducir uno entre 1 y 4 \n"
                         + "Porfavor lee las instrucciones");
                 menu();
-                break;
+            }
+            switch (entrada){
+                case 1:
+                    lista =menuEntidades("Visualizar");
+                    instancia = Visualizar(lista);
+                    menu();
+                    break;
+                case 2:
+                    lista =menuEntidades("Modificar");
+                    instancia = Visualizar(lista);
+                    indice = Seleccion();
+                    switch (instancia){
+                        case "Persona":
+                            lista = ModificarPersonas(lista,indice);
+                            manipuladorCSV.EscribeCsv(manipuladorListas.PersonasAString(lista),ArchivoPersonas);
+                            break;
+                        case "Mascota":
+                            lista = ModificarMascotas(lista,indice);
+
+                            manipuladorCSV.EscribeCsv(manipuladorListas.MascotasAString(lista),ArchivoMascotas);
+                            break;
+                        case "Veterinaria":
+                            lista = ModificarVeterinarias(lista,indice);
+
+                            manipuladorCSV.EscribeCsv(manipuladorListas.VeterinariasAString(lista),ArchivoVeterinarias);
+                            break;
+                        default:
+                            System.out.println("Opcion no valida");
+                            menu();
+                            break;
+                    }
+                    menu();
+                    break;
+                case 3:
+                    lista =menuEntidades("Agregar");
+                    instancia = Visualizar(lista);
+                    switch (instancia){
+                        case "Persona":
+                            System.out.println("Agregue los datos de su dueño a continuacion:");
+                            lista =AgregarPersona(lista);
+                            manipuladorCSV.EscribeCsv(manipuladorListas.PersonasAString(lista),ArchivoPersonas);
+                            break;
+                        case "Mascota":
+                            lista = AgregarMascota(lista);
+                            manipuladorCSV.EscribeCsv(manipuladorListas.MascotasAString(lista),ArchivoMascotas);
+                            break;
+                        case "Veterinaria":
+                            lista = AgregaVeterinaria(lista);
+                            manipuladorCSV.EscribeCsv(manipuladorListas.VeterinariasAString(lista),ArchivoVeterinarias);
+                            break;
+                        default:
+                            System.out.println("Opcion no valida");
+                            menu();
+                            break;
+                    }
+                    menu();
+
+                    break;
+                case 4:
+                    lista =menuEntidades("Eliminar");
+                    instancia = Visualizar(lista);
+                    indice = Seleccion();
+                    switch (instancia){
+                        case "Persona":
+                            lista.remove(indice);
+                            manipuladorCSV.EscribeCsv(manipuladorListas.PersonasAString(lista),ArchivoPersonas);
+                            break;
+                        case "Mascota":
+                            lista.remove(indice);
+                            manipuladorCSV.EscribeCsv(manipuladorListas.MascotasAString(lista),ArchivoMascotas);
+                            break;
+                        case "Veterinaria":
+                            lista.remove(indice);
+                            manipuladorCSV.EscribeCsv(manipuladorListas.VeterinariasAString(lista),ArchivoVeterinarias);
+                            break;
+                        default:
+                            System.out.println("Opcion no valida");
+                            menu();
+                            break;
+                    }
+                    menu();
+                    break;
+                case 5:
+                    System.exit(0);
+                default:
+                    System.out.println("El Entero que introdujo no esta en rango, favor de introducir uno entre 1 y 4 \n"
+                            + "Porfavor lee las instrucciones");
+                    menu();
+                    break;
+            }
+        }catch(Exception e){
+            System.out.println("La seleccion es invalida, regresando al menu");
+            menu();
         }
+
+
     }
     public LinkedList menuEntidades(String seleccion){
-        Scanner scanner = new Scanner(System.in);
-        int entrada=0;
-        System.out.println("Sobre cual de las opcion quiere: "+seleccion+"\n"+
-                "1.-Dueños\n"+ "2.-Mascotas\n"+"3.-Veterinarias");
+
+            Scanner scanner = new Scanner(System.in);
+             int entrada=0;
+            System.out.println("Sobre cual de las opcion quiere: "+seleccion+"\n"+
+                    "1.-Dueños\n"+ "2.-Mascotas\n"+"3.-Veterinarias");
         try{
             entrada = scanner.nextInt();
         }catch(java.util.InputMismatchException i){
@@ -266,7 +288,7 @@ public class Menu {
                     return listaPersonas;
                 case 2:
                     System.out.println("Introduce el(los) Nombre(s):");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     if(!validacion.ValidacionNombre(entrada)){
                         throw new NullPointerException();
                     }
@@ -274,7 +296,7 @@ public class Menu {
                     break;
                 case 3:
                     System.out.println("Introduce el Apellido Paterno:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     if(!validacion.ValidacionNombre(entrada)){
                         throw new NullPointerException();
                     }
@@ -282,7 +304,7 @@ public class Menu {
                     break;
                 case 4:
                     System.out.println("Introduce el Apellido Materno:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     if(!validacion.ValidacionNombre(entrada)){
                         throw new NullPointerException();
                     }
@@ -290,7 +312,7 @@ public class Menu {
                     break;
                 case 5:
                     System.out.println("Introduce el CURP:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     if (entrada ==null){
                         throw new NullPointerException();
                     }
@@ -298,17 +320,17 @@ public class Menu {
                     break;
                 case 6:
                     System.out.println("Introduce el estado:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     Direccion direccion = new Direccion();
                     direccion.setEstado(entrada);
                     System.out.println("Introduce la calle:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     direccion.setCalle(entrada);
                     System.out.println("Introduce el numero:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     direccion.setNumero(entrada);
                     System.out.println("Introduce el codigo postal:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     direccion.setCodigoPostal(entrada);
                     if(direccion==null){
                         throw new NullPointerException();
@@ -317,7 +339,7 @@ public class Menu {
                     break;
                 case 7:
                     System.out.println("Introduce el Telefono:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     if (!validacion.ValidacionTelefono(entrada)){
                         throw new NullPointerException();
                     }
@@ -325,7 +347,7 @@ public class Menu {
                     break;
                 case 8:
                     System.out.println("Introduce la fecha de nacimiento:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     if (entrada==null) {
                         throw new NullPointerException();
 
@@ -335,7 +357,7 @@ public class Menu {
                     break;
                 case 9:
                     System.out.println("Introduce el Email:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     if (!validacion.ValidacionEmail(entrada)){
                     throw new NullPointerException();
                 }
@@ -371,7 +393,7 @@ public class Menu {
                     return listaMascotas;
                 case 2:
                     System.out.println("Introduce el Nombre:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     if(!validacion.ValidacionNombre(entrada)){
                         throw new NullPointerException();
                     }
@@ -379,7 +401,7 @@ public class Menu {
                     break;
                 case 3:
                     System.out.println("Introduce el peso:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     if(entrada==null){
                         throw new NullPointerException();
                     }
@@ -387,7 +409,7 @@ public class Menu {
                     break;
                 case 4:
                     System.out.println("Introduce la edad:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     if (!validacion.ValidacionEdad(entrada)){
                         throw new NullPointerException();
                     }
@@ -395,7 +417,7 @@ public class Menu {
                     break;
                 case 5:
                     System.out.println("Introduce la fecha de nacimiento:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     if(entrada ==null){
                         throw new NullPointerException();
                     }
@@ -403,7 +425,7 @@ public class Menu {
                     break;
                 case 6:
                     System.out.println("Introduce la raza:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     if (!validacion.ValidacionNombre(entrada)){
                         throw new NullPointerException();
                     }
@@ -411,7 +433,10 @@ public class Menu {
                     break;
                 case 7:
                     System.out.println("Introduce el id del dueño:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
+                    if(entrada==null){
+                        throw new NullPointerException();
+                    }
                     listaMascotas.get(indice).setIdPersona(entrada);
                     break;
             }
@@ -443,7 +468,7 @@ public class Menu {
                     return listaVeterinarias;
                 case 2:
                     System.out.println("Introduce el Nombre:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     if(!validacion.ValidacionNombre(entrada)){
                         throw new NullPointerException();
                     }
@@ -451,7 +476,7 @@ public class Menu {
                     break;
                 case 3:
                     System.out.println("Introduce el numero de consultorios:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     if (!validacion.ValidacionConsultorios(entrada)){
                         throw new NullPointerException();
                     }
@@ -459,7 +484,7 @@ public class Menu {
                     break;
                 case 4:
                     System.out.println("Introduce el nombre del apartado:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     if (!validacion.ValidacionNombre(entrada)){
                         throw new NullPointerException();
                     }
@@ -467,7 +492,7 @@ public class Menu {
                     break;
                 case 5:
                     System.out.println("Introduce el telefono:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     if (!validacion.ValidacionTelefono(entrada)){
                         throw new NullPointerException();
                     }
@@ -475,27 +500,37 @@ public class Menu {
                     break;
                 case 6:
                     System.out.println("Introduce el estado:");
-                    entrada = scanner.nextLine();
+
+                    entrada = scanner2.nextLine();
                     Direccion direccion = new Direccion();
                     direccion.setEstado(entrada);
                     System.out.println("Introduce la calle:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     direccion.setCalle(entrada);
                     System.out.println("Introduce el numero:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     direccion.setNumero(entrada);
                     System.out.println("Introduce el codigo postal:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     direccion.setCodigoPostal(entrada);
+                    if (direccion==null){
+                        throw new NullPointerException();
+                    }
                     listaVeterinarias.get(indice).setDireccion(direccion);
                     break;
                 case 7:
                     System.out.println("Introduce el Horario de inicio:");
                     Horario horario = new Horario();
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
+                    if(entrada==null){
+                        throw new NullPointerException();
+                    }
                     horario.setHoraInicio(entrada);
                     System.out.println("Introduce el Horario de Termino:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
+                    if(entrada==null){
+                        throw new NullPointerException();
+                    }
                     horario.setHoraInicio(entrada);
                     listaVeterinarias.get(indice).setHorario(horario);
                     break;
@@ -516,40 +551,43 @@ public class Menu {
         persona.setId(id);
         try{
                     System.out.println("Introduce el(los) Nombre(s):");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     persona.setNombres(entrada);
                     System.out.println("Introduce el Apellido Paterno:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     persona.setApellidoPaterno(entrada);
                     System.out.println("Introduce el Apellido Materno:");
-                    entrada =scanner.nextLine();
+                    entrada =scanner2.nextLine();
                     persona.setApellidoMaterno(entrada);
                     System.out.println("Introduce el CURP:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     persona.setCURP(entrada);
                     System.out.println("Introduce el estado:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     Direccion direccion = new Direccion();
                     direccion.setEstado(entrada);
                     System.out.println("Introduce la calle:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     direccion.setCalle(entrada);
                     System.out.println("Introduce el numero:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     direccion.setNumero(entrada);
                     System.out.println("Introduce el codigo postal:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     direccion.setCodigoPostal(entrada);
                     persona.setDireccion(direccion);
                     System.out.println("Introduce el Telefono:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     persona.setTelefono(entrada);
                     System.out.println("Introduce la fecha de nacimiento:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     persona.setFechaNacimiento(entrada);
                     System.out.println("Introduce el Email:");
-                    entrada = scanner.nextLine();
+                    entrada = scanner2.nextLine();
                     persona.setEmail(entrada);
+                    if (!validacion.ValidacionPersona(persona)){
+                        throw new NullPointerException();
+                    }
                     listaPersonas.add(persona);
         }catch(Exception e){
             System.out.println("Su eleccion es invalida, regresando al menu");
@@ -564,23 +602,26 @@ public class Menu {
         Mascota mascota = new Mascota();
         try{
             System.out.println("Introduce el Nombre:");
-            entrada = scanner.nextLine();
+            entrada = scanner2.nextLine();
             mascota.setNombre(entrada);
             System.out.println("Introduce el Peso:");
-            entrada = scanner.nextLine();
+            entrada = scanner2.nextLine();
             mascota.setPeso(entrada);
             System.out.println("Introduce la edad:");
-            entrada =scanner.nextLine();
+            entrada =scanner2.nextLine();
             mascota.setEdad(entrada);
             System.out.println("Introduce la fecha de nacimiento:");
-            entrada = scanner.nextLine();
+            entrada = scanner2.nextLine();
             mascota.setFechaNacimiento(entrada);
             System.out.println("Introduce la raza:");
-            entrada = scanner.nextLine();
+            entrada = scanner2.nextLine();
             mascota.setRaza(entrada);
             System.out.println("Introduce el id de la persona:");
-            entrada = scanner.nextLine();
+            entrada = scanner2.nextLine();
             mascota.setIdPersona(entrada);
+            if(!validacion.ValidacionMascota(mascota)){
+                throw new NullPointerException();
+            }
             listaMascotas.add(mascota);
         }catch(Exception e){
             System.out.println("Su eleccion es invalida, regresando al menu");
@@ -596,32 +637,34 @@ public class Menu {
 
         try{
             System.out.println("Introduce el Nombre:");
-            entrada = scanner.nextLine();
+            entrada = scanner2.nextLine();
             veterinaria.setNombres(entrada);
             System.out.println("Introduce el numero de Consultorios:");
-            entrada = scanner.nextLine();
+            entrada = scanner2.nextLine();
             veterinaria.setConsultorio(entrada);
             System.out.println("Introduce el nombre del aparatado:");
-            entrada =scanner.nextLine();
+            entrada =scanner2.nextLine();
             veterinaria.setApartado(entrada);
             System.out.println("Introduce el Telefono:");
-            entrada = scanner.nextLine();
+            entrada = scanner2.nextLine();
             veterinaria.setTelefono(entrada);
             System.out.println("Introduce el estado:");
-            entrada = scanner.nextLine();
+            entrada = scanner2.nextLine();
             Direccion direccion = new Direccion();
             direccion.setEstado(entrada);
             System.out.println("Introduce la calle:");
-            entrada = scanner.nextLine();
+            entrada = scanner2.nextLine();
             direccion.setCalle(entrada);
             System.out.println("Introduce el numero:");
-            entrada = scanner.nextLine();
+            entrada = scanner2.nextLine();
             direccion.setNumero(entrada);
             System.out.println("Introduce el codigo postal:");
-            entrada = scanner.nextLine();
+            entrada = scanner2.nextLine();
             direccion.setCodigoPostal(entrada);
             veterinaria.setDireccion(direccion);
-
+            if(!validacion.ValidacionVeterinaria(veterinaria)){
+                throw new NullPointerException();
+            }
             listaVeterinaria.add(veterinaria);
         }catch(Exception e){
             System.out.println("Su eleccion es invalida, regresando al menu");

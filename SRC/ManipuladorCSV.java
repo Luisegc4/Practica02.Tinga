@@ -13,9 +13,9 @@ import java.util.LinkedList;
 
 public class ManipuladorCSV {
     /**
-    * Metodo que lee un archivo Csv y guarda cada linea de este en una LinkedList<String>
+    * Metodo que lee un archivo Csv y guarda cada linea de este en una LinkedList
     * @param ArchivoCsv con el nombre del archivo a leer
-    * @return LinkedList<String> con cada linea del ArchivoCsv
+    * @return LinkedList con cada linea del ArchivoCsv
     *  
     */
     public LinkedList<String> LeeArchivoCsv(String ArchivoCsv){
@@ -49,7 +49,7 @@ public class ManipuladorCSV {
     }
 
     /**
-     * Metodo que escribe un Csv pasandole una LinkedList<String>
+     * Metodo que escribe un Csv pasandole una LinkedList
      * @param listaAEscribir con el nombre del archivo a guardar
      * @param ArchivoDondeSeGuarda lista con las lineas en String que se escribiran en el csv
      * @return String con el archivo donde se guarda la lista

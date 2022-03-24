@@ -38,7 +38,7 @@ public class Horario {
  
    /**
     * Método setHoraInicio define la nueva  hora de inicio 
-    * @param HoraInicio -- actualiza la hora de inicio del horario . 
+    * @param horaInicio -- actualiza la hora de inicio del horario .
     */
     public void setHoraInicio(String horaInicio) {
         HoraInicio = horaInicio;
@@ -55,7 +55,7 @@ public class Horario {
     
     /**
     * Método setHoraFin define la nueva  hora de finalizacion 
-    * @param HoraFIn -- actualiza la hora de finalizacion del horario . 
+    * @param horaFin -- actualiza la hora de finalizacion del horario .
     */
     public void setHoraFin(String horaFin) {
         HoraFin = horaFin;

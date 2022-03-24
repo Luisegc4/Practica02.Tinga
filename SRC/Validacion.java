@@ -61,7 +61,7 @@ public class Validacion {
     
    /**
     * Metodo que valida que una Persona sea valida, verificando que sus atributos sean correctos 
-    * @param person persona a verificar  
+    * @param persona persona a verificar
     * @return true en caso de ser una persona valida, false en caso contrario 
     */
     
@@ -128,7 +128,7 @@ public class Validacion {
     */
     public boolean ValidacionNombre(String str){
         String strNormalizado = normaliza(str);
-        if(strNormalizado.equals("isempty")||strNormalizado.equals("contains invalid characters")){
+        if(strNormalizado.equals("isempty")||strNormalizado.equals("contains invalid characters")||strNormalizado.isEmpty()||str.isEmpty()){
             return false;
         }
         return true;

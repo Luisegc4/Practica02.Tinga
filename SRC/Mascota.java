@@ -29,6 +29,7 @@ public class Mascota{
      * @param  edad  -- edad de la mascota
      * @param  fechaNacimiento -- fecha de nacimiento de la mascota
      * @param  raza -- raza de la mascota
+     * @param idpersona -- identificador de la persona a la que pertenece la mascota
      */
 
     public Mascota(String nombre, String peso, String edad, String fechaNacimiento, String raza, String idpersona) {
