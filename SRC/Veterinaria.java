@@ -1,3 +1,12 @@
+/**
+ * Clase que modela una Mascota 
+ * @author Luis Emilio Gonzalez Covarrubias
+ * @author Luis Mario Escobar Rosales 
+ * @author Melissa Vázquez González
+ * @author Genaro de Jesús Miranda Martinez
+ * @author Maria del Sol Silva Hernández
+ * @version 23/03/2022
+ */
 package SRC;
 
 public class Veterinaria {
@@ -9,8 +18,22 @@ public class Veterinaria {
     Horario horario;
     Direccion direccion;
 
+    /**
+     * Constructor por omisión
+     */
     public Veterinaria(){
     }
+    
+    
+    /**
+     * Constructor por parámetros que genera una Mascota
+     * @param  nombre -- nombre de la veterinaria 
+     * @param  consultorios -- consultorios de la veterinaria 
+     * @param  apartado  -- apartado para poder cuidar  a la mascota 
+     * @param  telefono -- telefono de la veterinaria 
+     * @param  horario -- horario de la veterinaria
+     * @param  direccion -- direccion de la veterinaria 
+     */
 
     public Veterinaria(String nombre, String consultorios, String apartado, String telefono, Horario horario, Direccion direccion) {
         this.nombre = nombre;
@@ -21,14 +44,26 @@ public class Veterinaria {
         this.direccion = direccion;
     }
 
+   /**
+    * Método getNombre obtiene el nombre de la veterinaria 
+    * @return nombre -- regresa el nombre de la veterinaria . 
+    */
     public String getNombre() {
         return nombre;
     }
 
+   /**
+    * Método getConsultorios obtiene los consultorios de la veterinaria 
+    * @return consultorios -- regresa los consultorios  de la veterinaria . 
+    */
     public String getConsultorios() {
         return consultorios;
     }
 
+   /**
+    * Método getApartado obtiene el apartado de la veterinaria 
+    * @return apartados -- regresa el apartado  de la veterinaria . 
+    */    
     public String getApartado() {
         return apartado;
     }
