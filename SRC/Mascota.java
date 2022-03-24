@@ -24,11 +24,11 @@ public class Mascota{
     
     /**
      * Constructor por parámetros que genera una Mascota
-     * @param String nombre -- nombre de la mascota 
-     * @param String peso -- peso de la mascota
-     * @param String edad  -- edad de la mascota 
-     * @param String fechaNacimiento -- fecha de nacimiento de la mascota 
-     * @param String raza -- raza de la mascota 
+     * @param  nombre -- nombre de la mascota
+     * @param  peso -- peso de la mascota
+     * @param  edad  -- edad de la mascota
+     * @param  fechaNacimiento -- fecha de nacimiento de la mascota
+     * @param  raza -- raza de la mascota
      */
 
     public Mascota(String nombre, String peso, String edad, String fechaNacimiento, String raza, String idpersona) {
