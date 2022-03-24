@@ -1,13 +1,28 @@
+/**
+ * Clase que Manipula archivos CSV  
+ * @author Luis Emilio Gonzalez Covarrubias
+ * @author Luis Mario Escobar Rosales 
+ * @author Melissa Vázquez González
+ * @author Genaro de Jesús Miranda Martinez
+ * @author Maria del Sol Silva Hernández
+ * @version 23/03/2022
+ */
+
 package SRC;
 import java.text.ParseException;
 import java.util.LinkedList;
 public class ManipuladorListas {
+
+    /**
+     * Constructor por omisión
+     */
     public ManipuladorListas() {
     }
+
     /**
-     *
-     * @param LectorCsv
-     * @return
+     * Método que recibe una lista de string y devuelve una lista de personas.
+     * @param LectorCsv -- lista de strings que se leyeron del archivoCSV
+     * @return listaPersonas -- La lista de personas
      * @throws ParseException
      */
     public LinkedList<Persona> LeePersonas(LinkedList<String> LectorCsv) throws ParseException {
@@ -19,10 +34,14 @@ public class ManipuladorListas {
             Persona persona = new Persona(arr[0],arr[1],arr[2],arr[3],arr[4],direccion,arr[9],arr[10],arr[11]);
             listaPersonas.add(persona);
         }
-
-
         return listaPersonas;
     }
+
+    /**
+     * Método que recibe una lista de string y devuelve una lista de veterinarias.
+     * @param LectorCsv -- lista de strings que se leyeron del archivoCSV
+     * @return listaVeterinarias -- La lista de veterinarias
+     */
     public LinkedList<Veterinaria> LeeVeterinaria(LinkedList<String> LectorCsv){
         LinkedList<Veterinaria> listaVeterinarias = new LinkedList<>();
         for (String linea:LectorCsv){
@@ -34,6 +53,13 @@ public class ManipuladorListas {
         }
         return listaVeterinarias;
     }
+
+    /**
+     * Método que recibe una lista de string y devuelve una lista de mascotas.
+     * @param LectorCsv -- lista de strings que se leyeron del archivoCSV
+     * @return listaMascotas -- La lista de mascotas
+     * @throws ParseException
+     */
     public LinkedList<Mascota> LeeMascota(LinkedList<String> LectorCsv) throws ParseException {
         LinkedList<Mascota> listaMascotas = new LinkedList<>();
         for (String linea:LectorCsv) {
@@ -43,6 +69,13 @@ public class ManipuladorListas {
         }
         return listaMascotas;
     }
+
+    /**
+     * Método PersonasAString que recibe una lista de personas, 
+     * cada elemento de la lista lo convierte a string y lo agrega a una nueva lista.
+     * @param listapersonas -- lista que contiene las personas
+     * @return listaAescribir -- lista a escribir de las personas
+     */
     public LinkedList<String> PersonasAString(LinkedList<Persona>listapersonas){
         LinkedList<String> listaAescribir = new LinkedList<>();
         for (Persona personas:listapersonas) {
@@ -50,6 +83,13 @@ public class ManipuladorListas {
         }
         return listaAescribir;
     }
+
+    /**
+     * Método VeterinariasAString que recibe una lista de veterinarios, 
+     * cada elemento de la lista lo convierte a string y lo agrega a una nueva lista.
+     * @param listaVeterinarias -- lista que contiene las veterinarias
+     * @return listaAescribir -- lista a escribir de las veterinarias
+     */
     public LinkedList<String> VeterinariasAString(LinkedList<Veterinaria>listapersonas){
         LinkedList<String> listaAescribir = new LinkedList<>();
         for (Veterinaria veterinaria:listapersonas) {
@@ -57,6 +97,13 @@ public class ManipuladorListas {
         }
         return listaAescribir;
     }
+
+    /**
+     * Método MascotasAString que recibe una lista de mascotas, 
+     * cada elemento de la lista lo convierte a string y lo agrega a una nueva lista.
+     * @param listaMascotas -- lista que contiene las mascotas
+     * @return listaAescribir -- lista a escribir de las mascotas
+     */
     public LinkedList<String> MascotasAString(LinkedList<Mascota>listapersonas){
         LinkedList<String> listaAescribir = new LinkedList<>();
         for (Mascota mascotas:listapersonas) {
