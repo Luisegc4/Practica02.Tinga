@@ -133,7 +133,7 @@ public class Mascota{
     
    /**
     * Método setIdPersona que modifica  el Id del dueño de la mascota. 
-    * @param String idPersona -- modifica el identificador del dueño de la mascota   
+    * @param  idPersona -- modifica el identificador del dueño de la mascota
     */
     public void setIdPersona(String idPersona) {
         this.idPersona = idPersona;

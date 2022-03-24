@@ -87,16 +87,15 @@ public class Menu {
                 switch (instancia){
                     case "Persona":
                     System.out.println("Agregue los datos de su dueño a continuacion:");
-
-
+                    lista =AgregarPersona(lista);
                         manipuladorCSV.EscribeCsv(manipuladorListas.PersonasAString(lista),ArchivoPersonas);
                         break;
                     case "Mascota":
-
+                        lista = AgregarMascota(lista);
                         manipuladorCSV.EscribeCsv(manipuladorListas.MascotasAString(lista),ArchivoMascotas);
                         break;
                     case "Veterinaria":
-
+                        lista = AgregaVeterinaria(lista);
                         manipuladorCSV.EscribeCsv(manipuladorListas.VeterinariasAString(lista),ArchivoVeterinarias);
                         break;
                     default:
@@ -130,9 +129,7 @@ public class Menu {
                         break;
                 }
                 menu();
-
                 break;
-
             case 5:
                 System.exit(0);
             default:
@@ -274,7 +271,6 @@ public class Menu {
                     break;
                 case 3:
                     System.out.println("Introduce el Apellido Paterno:");
-
                     entrada = scanner.nextLine();
                     listaPersonas.get(indice).setApellidoPaterno(entrada);
                     break;
@@ -507,5 +503,77 @@ public class Menu {
             menu();
         }
         return listaPersonas;
+    }
+    public LinkedList AgregarMascota(LinkedList lista){
+        int tam = lista.size();
+        LinkedList<Mascota> listaMascotas = (LinkedList<Mascota>)lista;
+        String entrada;
+        Mascota mascota = new Mascota();
+        try{
+            System.out.println("Introduce el Nombre:");
+            entrada = scanner.nextLine();
+            mascota.setNombre(entrada);
+            System.out.println("Introduce el Peso:");
+            entrada = scanner.nextLine();
+            mascota.setPeso(entrada);
+            System.out.println("Introduce la edad:");
+            entrada =scanner.nextLine();
+            mascota.setEdad(entrada);
+            System.out.println("Introduce la fecha de nacimiento:");
+            entrada = scanner.nextLine();
+            mascota.setFechaNacimiento(entrada);
+            System.out.println("Introduce la raza:");
+            entrada = scanner.nextLine();
+            mascota.setRaza(entrada);
+            System.out.println("Introduce el id de la persona:");
+            entrada = scanner.nextLine();
+            mascota.setIdPersona(entrada);
+            listaMascotas.add(mascota);
+        }catch(Exception e){
+            System.out.println("Su eleccion es invalida, regresando al menu");
+            menu();
+        }
+        return listaMascotas;
+    }
+    public LinkedList AgregaVeterinaria(LinkedList lista){
+        int tam = lista.size();
+        LinkedList<Veterinaria> listaVeterinaria = (LinkedList<Veterinaria>)lista;
+        String entrada;
+        Veterinaria veterinaria =  new Veterinaria();
+
+        try{
+            System.out.println("Introduce el Nombre:");
+            entrada = scanner.nextLine();
+            veterinaria.setNombres(entrada);
+            System.out.println("Introduce el numero de Consultorios:");
+            entrada = scanner.nextLine();
+            veterinaria.setConsultorio(entrada);
+            System.out.println("Introduce el nombre del aparatado:");
+            entrada =scanner.nextLine();
+            veterinaria.setApartado(entrada);
+            System.out.println("Introduce el Telefono:");
+            entrada = scanner.nextLine();
+            veterinaria.setTelefono(entrada);
+            System.out.println("Introduce el estado:");
+            entrada = scanner.nextLine();
+            Direccion direccion = new Direccion();
+            direccion.setEstado(entrada);
+            System.out.println("Introduce la calle:");
+            entrada = scanner.nextLine();
+            direccion.setCalle(entrada);
+            System.out.println("Introduce el numero:");
+            entrada = scanner.nextLine();
+            direccion.setNumero(entrada);
+            System.out.println("Introduce el codigo postal:");
+            entrada = scanner.nextLine();
+            direccion.setCodigoPostal(entrada);
+            veterinaria.setDireccion(direccion);
+
+            listaVeterinaria.add(veterinaria);
+        }catch(Exception e){
+            System.out.println("Su eleccion es invalida, regresando al menu");
+            menu();
+        }
+        return listaVeterinaria;
     }
 }
