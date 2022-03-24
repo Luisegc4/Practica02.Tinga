@@ -21,10 +21,8 @@ public class ManipuladorCSV {
                 lista.add(linea1);
                 linea1 = bufferLectura.readLine();
             }
-
         }catch (IOException e) {
             e.printStackTrace();
-            System.out.println("Usted sera redirigido al menu");
         }
         finally {
             if (bufferLectura != null) {
@@ -33,10 +31,10 @@ public class ManipuladorCSV {
                 }
                 catch (IOException e) {
                     e.printStackTrace();
-                    System.out.println("Usted sera redirigido al menu");
                 }
             }
         }
+        System.out.println(lista.getFirst().toString()+"--"+lista.getLast().toString());
         return lista;
     }
 
@@ -58,7 +56,6 @@ public class ManipuladorCSV {
             bw.flush();
         }catch(IOException e){
             e.printStackTrace();
-            System.out.println("Usted sera redirigido al menu");
         }
         return Nombre;
     }

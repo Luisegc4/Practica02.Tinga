@@ -12,10 +12,15 @@ public class ManipuladorListas {
         LinkedList<Persona> listaPersonas= new LinkedList<>();
         for (String linea:LectorCsv) {
             String[] arr = linea.split(",");
+            System.out.println(arr.length);
+//            for (String str:arr) {
+//                System.out.print(str +"-");
+//            }
             Direccion direccion = new Direccion(arr[5],arr[6],arr[7],arr[8]);
             Persona persona = new Persona(arr[0],arr[1],arr[2],arr[3],arr[4],direccion,arr[9],arr[10],arr[11]);
             listaPersonas.add(persona);
         }
+
 
         return listaPersonas;
     }

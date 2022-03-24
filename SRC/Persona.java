@@ -99,7 +99,6 @@ public class Persona {
 
     @Override
     public String toString() {
-        return id + "," + Nombres + "," + ApellidoPaterno + "," + ApellidoMaterno + "," + CURP + "," +direccion.toString() +","+ telefono + "," +FechaNacimiento.toString()+"," + email;
-        //TODO: Casteo Fecha a String
+        return id + "," + Nombres + "," + ApellidoPaterno + "," + ApellidoMaterno + "," + CURP + "," +direccion.toString() +","+ telefono + "," +FechaNacimiento+"," + email;
     }
 }
