@@ -3,6 +3,15 @@ import java.text.ParseException;
 import java.util.LinkedList;
 import java.util.Scanner;
 
+/**
+ * Clase que crea un menu
+ * @author Luis Emilio Gonzalez Covarrubias
+ * @author Luis Mario Escobar Rosales
+ * @author Melissa Vázquez González
+ * @author Genaro de Jesús Miranda Martinez
+ * @author Maria del Sol Silva Hernández
+ * @version 23/03/2022
+ */
 public class Menu {
     String ArchivoPersonas;
     String ArchivoMascotas;
@@ -15,6 +24,9 @@ public class Menu {
     Scanner scanner3;
     int contador1;
 
+    /**
+     * Constructor de el Menu
+     */
     public Menu() {
         String Path = "SRC/";
 //        String Path = "";
@@ -28,6 +40,10 @@ public class Menu {
         validacion = new Validacion();
         contador1=0;
     }
+
+    /**
+     * Crea el menu, es recursivo controlando excepciones para no dejar caer el programa
+     */
     public void menu(){
         try{
             if(contador1>0){
@@ -160,6 +176,13 @@ public class Menu {
 
 
     }
+
+    /**
+     * menuEntidades Genera el menu de las entidades utiliza recursion y control de excepciones
+     * Permite elegir la entidad sobre la cual queremos explorar
+     * @param seleccion -- La seleccion de la entidad que se eligio
+     * @return LinkedList con las entidades para manipularlas
+     */
     public LinkedList menuEntidades(String seleccion){
 
             Scanner scanner = new Scanner(System.in);
@@ -205,6 +228,12 @@ public class Menu {
 
         return null;
     }
+
+    /**
+     * getInstanceof Obtiene la instancia a la que pertenecen los elementos de una lista
+     * @param lista -- lista a probar para buscar a que entidad pertenecen sus elementos
+     * @return String con el nombre de la clase a la que pertenecen sus elementos de la lista
+     */
     public String getInstanceof(LinkedList lista){
         String cad="";
         Persona persona= new Persona();
@@ -228,6 +257,12 @@ public class Menu {
         }
         return cad;
     }
+
+    /**
+     * Visualizar Imprime en pantalla todos los elementos de una lista de Personas, Veterinarias, mascotas
+     * @param lista -- lista con las entidades que queremos visualizar
+     * @return String con la clase de las entidades visualizadas usando getinstanceof
+     */
     public String Visualizar(LinkedList lista){
         String instancia = getInstanceof(lista);
         int contador =0;
@@ -255,6 +290,11 @@ public class Menu {
         }
         return instancia;
     }
+
+    /**
+     * Seleccion Lee de teclado la seleccion en menu de numeros
+     * @return int con la seleccion
+     */
     public int Seleccion(){
         System.out.println("Seleccione una de las opciones anteriores, eligiendo su indice:");
         int entrada;
@@ -266,6 +306,13 @@ public class Menu {
         }
         return entrada;
     }
+
+    /**
+     * ModificarPersonas este metodo permite modificar los datos de una persona
+     * @param lista -- la lista con las personas a modificar
+     * @param indice -- el indice de la persona que se desea modificar
+     * @return LinkedList con las personas modificadas
+     */
     public LinkedList ModificarPersonas(LinkedList lista, int indice){
         LinkedList<Persona>listaPersonas = (LinkedList<Persona>) lista;
         int elegir=0;
@@ -372,6 +419,12 @@ public class Menu {
 
 
     }
+    /**
+     * ModificarMascotas este metodo permite modificar los datos de una mascota
+     * @param lista -- la lista con las mascotas a modificar
+     * @param indice -- el indice de la mascota que se desea modificar
+     * @return LinkedList con las mascotas modificadas
+     */
     public LinkedList ModificarMascotas(LinkedList lista, int indice){
 
         LinkedList<Mascota>listaMascotas = (LinkedList<Mascota>) lista;
@@ -447,6 +500,12 @@ public class Menu {
         return ModificarPersonas(listaMascotas,indice);
 
     }
+    /**
+     * ModificarVeterinarias este metodo permite modificar los datos de una Veterinaria
+     * @param lista -- la lista con las Veterinarias a modificar
+     * @param indice -- el indice de la Veterinarias que se desea modificar
+     * @return LinkedList con las Veterinarias modificadas
+     */
     public LinkedList ModificarVeterinarias(LinkedList lista, int indice){
 
         LinkedList<Veterinaria>listaVeterinarias = (LinkedList<Veterinaria>) lista;
@@ -542,6 +601,12 @@ public class Menu {
         return ModificarPersonas(listaVeterinarias,indice);
 
     }
+
+    /**
+     * AgregarPersonas metodo que permite agregar una persona a la base de datos
+     * @param lista -- Lista con las personas a las cuales queremos agregar la nueva persona
+     * @return LinkedList con la nueva persona
+     */
     public LinkedList AgregarPersona(LinkedList lista){
         int tam = lista.size();
         LinkedList<Persona> listaPersonas = (LinkedList<Persona>)lista;
@@ -595,6 +660,11 @@ public class Menu {
         }
         return listaPersonas;
     }
+    /**
+     * AgregarMascota metodo que permite agregar una persona a la base de datos
+     * @param lista -- Lista con las mascotas a las cuales queremos agregar la nueva mascotas
+     * @return LinkedList con la nueva mascotas
+     */
     public LinkedList AgregarMascota(LinkedList lista){
         int tam = lista.size();
         LinkedList<Mascota> listaMascotas = (LinkedList<Mascota>)lista;
@@ -629,6 +699,11 @@ public class Menu {
         }
         return listaMascotas;
     }
+    /**
+     * AgregarVeterinaria metodo que permite agregar una persona a la base de datos
+     * @param lista -- Lista con las veterinarias a las cuales queremos agregar la nueva veterinaria
+     * @return LinkedList con la nueva veterinaria
+     */
     public LinkedList AgregaVeterinaria(LinkedList lista){
         int tam = lista.size();
         LinkedList<Veterinaria> listaVeterinaria = (LinkedList<Veterinaria>)lista;
