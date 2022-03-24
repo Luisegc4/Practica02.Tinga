@@ -244,7 +244,7 @@ public class Menu {
         }
         return entrada;
     }
-    public void ModificarPersonas(LinkedList lista, int indice){
+    public LinkedList ModificarPersonas(LinkedList lista, int indice){
         LinkedList<Persona>listaPersonas = (LinkedList<Persona>) lista;
         int elegir=0;
         String entrada;
@@ -259,64 +259,71 @@ public class Menu {
                 "8.-FechaNacimiento\n" +
                 "9.-email\n" +
                 "Introduzca su seleccion: ");
-        elegir = scanner.nextInt();
-        switch (elegir){
-            case 1:
-                menu();
-                break;
-            case 2:
-                System.out.println("Introduce el(los) Nombre(s):");
-                entrada = scanner.nextLine();
-                listaPersonas.get(indice).setNombres(entrada);
-                break;
-            case 3:
-                System.out.println("Introduce el Apellido Paterno:");
+        try{
+            elegir = scanner.nextInt();
+            switch (elegir){
+                case 1:
+                    return listaPersonas;
+                case 2:
+                    System.out.println("Introduce el(los) Nombre(s):");
+                    entrada = scanner.nextLine();
+                    listaPersonas.get(indice).setNombres(entrada);
+                    break;
+                case 3:
+                    System.out.println("Introduce el Apellido Paterno:");
 
-                entrada = scanner.nextLine();
-                listaPersonas.get(indice).setApellidoPaterno(entrada);
-                break;
-            case 4:
-                System.out.println("Introduce el Apellido Materno:");
-                entrada = scanner.nextLine();
-                listaPersonas.get(indice).setApellidoMaterno(entrada);
-                break;
-            case 5:
-                System.out.println("Introduce el CURP:");
-                entrada = scanner.nextLine();
-                listaPersonas.get(indice).setCURP(entrada);
-                break;
-            case 6:
-                System.out.println("Introduce el estado:");
-                entrada = scanner.nextLine();
-                Direccion direccion = new Direccion();
-                direccion.setEstado(entrada);
-                System.out.println("Introduce la calle:");
-                entrada = scanner.nextLine();
-                direccion.setCalle(entrada);
-                System.out.println("Introduce el numero:");
-                entrada = scanner.nextLine();
-                direccion.setNumero(entrada);
-                System.out.println("Introduce el codigo postal:");
-                entrada = scanner.nextLine();
-                direccion.setCodigoPostal(entrada);
-                listaPersonas.get(indice).setDireccion(direccion);
-                break;
-            case 7:
-                System.out.println("Introduce el Telefono:");
-                entrada = scanner.nextLine();
-                listaPersonas.get(indice).setTelefono(entrada);
-                break;
-            case 8:
-                System.out.println("Introduce la fecha de nacimiento:");
-                entrada = scanner.nextLine();
-                listaPersonas.get(indice).setFechaNacimiento(entrada);
-                break;
-            case 9:
-                System.out.println("Introduce el Email:");
-                entrada = scanner.nextLine();
-                listaPersonas.get(indice).setEmail(entrada);
-                break;
+                    entrada = scanner.nextLine();
+                    listaPersonas.get(indice).setApellidoPaterno(entrada);
+                    break;
+                case 4:
+                    System.out.println("Introduce el Apellido Materno:");
+                    entrada = scanner.nextLine();
+                    listaPersonas.get(indice).setApellidoMaterno(entrada);
+                    break;
+                case 5:
+                    System.out.println("Introduce el CURP:");
+                    entrada = scanner.nextLine();
+                    listaPersonas.get(indice).setCURP(entrada);
+                    break;
+                case 6:
+                    System.out.println("Introduce el estado:");
+                    entrada = scanner.nextLine();
+                    Direccion direccion = new Direccion();
+                    direccion.setEstado(entrada);
+                    System.out.println("Introduce la calle:");
+                    entrada = scanner.nextLine();
+                    direccion.setCalle(entrada);
+                    System.out.println("Introduce el numero:");
+                    entrada = scanner.nextLine();
+                    direccion.setNumero(entrada);
+                    System.out.println("Introduce el codigo postal:");
+                    entrada = scanner.nextLine();
+                    direccion.setCodigoPostal(entrada);
+                    listaPersonas.get(indice).setDireccion(direccion);
+                    break;
+                case 7:
+                    System.out.println("Introduce el Telefono:");
+                    entrada = scanner.nextLine();
+                    listaPersonas.get(indice).setTelefono(entrada);
+                    break;
+                case 8:
+                    System.out.println("Introduce la fecha de nacimiento:");
+                    entrada = scanner.nextLine();
+                    listaPersonas.get(indice).setFechaNacimiento(entrada);
+                    break;
+                case 9:
+                    System.out.println("Introduce el Email:");
+                    entrada = scanner.nextLine();
+                    listaPersonas.get(indice).setEmail(entrada);
+                    break;
+            }
+        }catch(Exception e){
+            System.out.println("Su eleccion es invalida, regresando al menu");
+            menu();
         }
+        return ModificarPersonas(lista,indice);
+
+
     }
     public void ModificarMascotas(LinkedList lista, int indice){
         String instancia = Visualizar(lista);
