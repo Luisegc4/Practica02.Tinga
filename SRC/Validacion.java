@@ -135,8 +135,8 @@ public class Validacion {
     }
     
    /**
-    * Metodo que valida que una cadena str  sea un telefono valid,
-    * normaliza la cadena, y verifica si tiene caracteres que sean distintos de numeros  
+    * Metodo que valida que una cadena str  sea un telefono valido,
+    * normaliza la cadena, y verifica si los caracteres son solo numeros  
     * @param str cadena  a verificar  
     * @return true en caso de ser un telefono valida, false en caso contrario 
     */
@@ -144,14 +144,34 @@ public class Validacion {
         Matcher matcher = VALID_PHONE_ADDRESS_REGEX.matcher(str);
         return matcher.find();
     }
+    
+   /**
+    * Metodo que valida que una cadena str  sea un email valido,
+    * normaliza la cadena, y verifica si el caracter tiene una estrucura tipo : example@example.mmm
+    * @param str cadena  a verificar  
+    * @return true en caso de ser un email valido, false en caso contrario 
+    */
     public boolean ValidacionEmail(String str){
         Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(str);
         return matcher.find();
     }
+    /**
+    * Metodo que valida que una cadena str  sea una edad valida,
+    * normaliza la cadena, y verifica si los caracteres son solo numeros   
+    * @param str cadena  a verificar  
+    * @return true en caso de ser una edad valida, false en caso contrario 
+    */
     public boolean ValidacionEdad(String str){
         Matcher matcher = VALID_AGE_ADDRESS_REGEX.matcher(str);
         return matcher.find();
     }
+    
+   /**
+    * Metodo que valida que una cadena str  sean consultorios validos,
+    * normaliza la cadena, y verifica si es valida   
+    * @param str cadena  a verificar  
+    * @return true en caso de ser consultorios validos, false en caso contrario 
+    */
     public boolean ValidacionConsultorios(String str){
         Matcher matcher = VALID_CONSULTORIOS_ADDRESS_REGEX.matcher(str);
         return matcher.find();
