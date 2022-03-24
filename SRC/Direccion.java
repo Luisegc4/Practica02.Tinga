@@ -48,7 +48,7 @@ public class Direccion {
 
    /**
     * Método setEstado que define el nuevo estado(lugar) de la direccion. 
-    * @param  nombre -- El nuevo nombre de la veterinaria.
+    * @param  estado -- El nuevo nombre de la veterinaria.
     */
     public void setEstado(String estado) {
         this.estado = estado;
@@ -94,7 +94,7 @@ public class Direccion {
     
    /**
     * Método setCodigoPostal que define el nuevo codigo postal   de la direccion. 
-    * @param  codigopostal -- El nuevo codigo postal  de la direccion .
+    * @param  codigoPostal-- El nuevo codigo postal  de la direccion .
     */
     public void setCodigoPostal(String codigoPostal) {
         CodigoPostal = codigoPostal;

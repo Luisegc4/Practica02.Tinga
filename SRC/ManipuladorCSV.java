@@ -49,7 +49,7 @@ public class ManipuladorCSV {
     }
 
     /**
-     * Metodo que escribe un Csv pasandole una LinkedList
+     * Metodo que escribe un Csv pasandole una LinkedList<String>
      * @param listaAEscribir con el nombre del archivo a guardar
      * @param ArchivoDondeSeGuarda lista con las lineas en String que se escribiran en el csv
      * @return String con el archivo donde se guarda la lista

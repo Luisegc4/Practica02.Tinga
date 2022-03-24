@@ -62,7 +62,6 @@ public class Menu {
                 switch (instancia){
                     case "Persona":
                         lista = ModificarPersonas(lista,indice);
-
                         manipuladorCSV.EscribeCsv(manipuladorListas.PersonasAString(lista),ArchivoPersonas);
                         break;
                     case "Mascota":
@@ -268,21 +267,33 @@ public class Menu {
                 case 2:
                     System.out.println("Introduce el(los) Nombre(s):");
                     entrada = scanner.nextLine();
+                    if(!validacion.ValidacionNombre(entrada)){
+                        throw new NullPointerException();
+                    }
                     listaPersonas.get(indice).setNombres(entrada);
                     break;
                 case 3:
                     System.out.println("Introduce el Apellido Paterno:");
                     entrada = scanner.nextLine();
+                    if(!validacion.ValidacionNombre(entrada)){
+                        throw new NullPointerException();
+                    }
                     listaPersonas.get(indice).setApellidoPaterno(entrada);
                     break;
                 case 4:
                     System.out.println("Introduce el Apellido Materno:");
                     entrada = scanner.nextLine();
+                    if(!validacion.ValidacionNombre(entrada)){
+                        throw new NullPointerException();
+                    }
                     listaPersonas.get(indice).setApellidoMaterno(entrada);
                     break;
                 case 5:
                     System.out.println("Introduce el CURP:");
                     entrada = scanner.nextLine();
+                    if (entrada ==null){
+                        throw new NullPointerException();
+                    }
                     listaPersonas.get(indice).setCURP(entrada);
                     break;
                 case 6:
@@ -299,21 +310,35 @@ public class Menu {
                     System.out.println("Introduce el codigo postal:");
                     entrada = scanner.nextLine();
                     direccion.setCodigoPostal(entrada);
+                    if(direccion==null){
+                        throw new NullPointerException();
+                    }
                     listaPersonas.get(indice).setDireccion(direccion);
                     break;
                 case 7:
                     System.out.println("Introduce el Telefono:");
                     entrada = scanner.nextLine();
+                    if (!validacion.ValidacionTelefono(entrada)){
+                        throw new NullPointerException();
+                    }
                     listaPersonas.get(indice).setTelefono(entrada);
                     break;
                 case 8:
                     System.out.println("Introduce la fecha de nacimiento:");
                     entrada = scanner.nextLine();
+                    if (entrada==null) {
+                        throw new NullPointerException();
+
+                    }
                     listaPersonas.get(indice).setFechaNacimiento(entrada);
+
                     break;
                 case 9:
                     System.out.println("Introduce el Email:");
                     entrada = scanner.nextLine();
+                    if (!validacion.ValidacionEmail(entrada)){
+                    throw new NullPointerException();
+                }
                     listaPersonas.get(indice).setEmail(entrada);
                     break;
             }
@@ -347,26 +372,41 @@ public class Menu {
                 case 2:
                     System.out.println("Introduce el Nombre:");
                     entrada = scanner.nextLine();
+                    if(!validacion.ValidacionNombre(entrada)){
+                        throw new NullPointerException();
+                    }
                     listaMascotas.get(indice).setNombre(entrada);
                     break;
                 case 3:
                     System.out.println("Introduce el peso:");
                     entrada = scanner.nextLine();
+                    if(entrada==null){
+                        throw new NullPointerException();
+                    }
                     listaMascotas.get(indice).setPeso(entrada);
                     break;
                 case 4:
                     System.out.println("Introduce la edad:");
                     entrada = scanner.nextLine();
+                    if (!validacion.ValidacionEdad(entrada)){
+                        throw new NullPointerException();
+                    }
                     listaMascotas.get(indice).setEdad(entrada);
                     break;
                 case 5:
                     System.out.println("Introduce la fecha de nacimiento:");
                     entrada = scanner.nextLine();
+                    if(entrada ==null){
+                        throw new NullPointerException();
+                    }
                     listaMascotas.get(indice).setFechaNacimiento(entrada);
                     break;
                 case 6:
                     System.out.println("Introduce la raza:");
                     entrada = scanner.nextLine();
+                    if (!validacion.ValidacionNombre(entrada)){
+                        throw new NullPointerException();
+                    }
                     listaMascotas.get(indice).setRaza(entrada);
                     break;
                 case 7:
@@ -404,22 +444,34 @@ public class Menu {
                 case 2:
                     System.out.println("Introduce el Nombre:");
                     entrada = scanner.nextLine();
+                    if(!validacion.ValidacionNombre(entrada)){
+                        throw new NullPointerException();
+                    }
                     listaVeterinarias.get(indice).setNombres(entrada);
                     break;
                 case 3:
                     System.out.println("Introduce el numero de consultorios:");
                     entrada = scanner.nextLine();
+                    if (!validacion.ValidacionConsultorios(entrada)){
+                        throw new NullPointerException();
+                    }
                     listaVeterinarias.get(indice).setConsultorio(entrada);
                     break;
                 case 4:
                     System.out.println("Introduce el nombre del apartado:");
                     entrada = scanner.nextLine();
+                    if (!validacion.ValidacionNombre(entrada)){
+                        throw new NullPointerException();
+                    }
                     listaVeterinarias.get(indice).setApartado(entrada);
                     break;
                 case 5:
                     System.out.println("Introduce el telefono:");
                     entrada = scanner.nextLine();
-                    listaVeterinarias.get(indice).setTelefono(entrada);
+                    if (!validacion.ValidacionTelefono(entrada)){
+                        throw new NullPointerException();
+                    }
+                        listaVeterinarias.get(indice).setTelefono(entrada);
                     break;
                 case 6:
                     System.out.println("Introduce el estado:");
