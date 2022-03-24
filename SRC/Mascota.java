@@ -50,14 +50,14 @@ public class Mascota{
     
    /**
     * Método setNombre que define el nuevo nombre de la mascota. 
-    * @param String nombre -- El nuevo nombre de la mascota.
+    * @param  nombre -- El nuevo nombre de la mascota.
     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
     /**
     * Método getPeso que obtiene el peso de la mascota.
-    * @return String peso -- regresa el peso de la mascota. 
+    * @return peso -- regresa el peso de la mascota. 
     */
     public String getPeso() {
         return peso;
@@ -65,7 +65,7 @@ public class Mascota{
 
     /**
     * Método setPeso que modifica   el nuevo peso de la mascota. 
-    * @param String peso -- el nuevo peso de la mascota 
+    * @param  peso -- el nuevo peso de la mascota 
     */
     public void setPeso(String peso) {
         this.peso = peso;
@@ -74,7 +74,7 @@ public class Mascota{
     
    /**
     * Método getEdad que obtiene la edad de la mascota.
-    * @return String edad -- regresa la edad  de la mascota. 
+    * @return edad -- regresa la edad  de la mascota. 
     */  
     public String getEdad() {
         return edad;
@@ -82,7 +82,7 @@ public class Mascota{
 
    /**
     * Método setEdad que modifica  la edad  de la mascota. 
-    * @param String edad -- modifica la edad de la mascota 
+    * @param  edad -- modifica la edad de la mascota 
     */
     public void setEdad(String edad) {
         this.edad = edad;
@@ -90,7 +90,7 @@ public class Mascota{
 
    /**
     * Método getFechaNacimiento que obtiene la fecha de nacimiento  de la mascota.
-    * @return String edad -- regresa la edad  de la mascota. 
+    * @return  edad -- regresa la edad  de la mascota. 
     */      
     public String getFechaNacimiento() {
         return FechaNacimiento;
@@ -99,7 +99,7 @@ public class Mascota{
     
    /**
     * Método setFechaNacimiento que modifica  la fecha de nacimiento  de la mascota. 
-    * @param FechaNacimiento fechaNacimiento -- modifica la fecha de nacimiento  de la mascota 
+    * @param  fechaNacimiento -- modifica la fecha de nacimiento  de la mascota 
     */
     public void setFechaNacimiento(String fechaNacimiento) {
         FechaNacimiento = fechaNacimiento;
@@ -107,7 +107,7 @@ public class Mascota{
     
    /**
     * Método getRaza que obtiene la raza  de la mascota.
-    * @return String raza -- regresa la edad  de la mascota. 
+    * @return  raza -- regresa la edad  de la mascota. 
     */  
     public String getRaza() {
         return raza;
@@ -115,7 +115,7 @@ public class Mascota{
 
    /**
     * Método setRaza que modifica  la raza de   de la mascota. 
-    * @param String raza -- modifica la raza de la mascota   de la mascota 
+    * @param raza -- modifica la raza de la mascota   de la mascota 
     */
     public void setRaza(String raza) {
         this.raza = raza;
@@ -124,7 +124,7 @@ public class Mascota{
     
    /**
     * Método getIdPersona que obtiene  el identificador del dueño   de la mascota.
-    * @return String IdPersona -- regresa el identificador del dueño   de la mascota. 
+    * @return IdPersona -- regresa el identificador del dueño   de la mascota. 
     */ 
     public String getIdPersona() {
         return idPersona;
@@ -141,7 +141,7 @@ public class Mascota{
 
    /**
     * Método toString que regresa un string que representa a la mascota . 
-    * @return  String modelo de la mascota   
+    * @return modelo de la mascota   
     */
     @Override
     public String toString() {
