@@ -40,54 +40,109 @@ public class Mascota{
         this.idPersona = idpersona;
     }
 
+   /**
+    * Método getNombre que obtiene el nombre de la mascota.
+    * @return nombre -- regresa el nombre de la mascota. 
+    */
     public String getNombre() {
         return nombre;
     }
-
+    
+   /**
+    * Método setNombre que define el nuevo nombre de la mascota. 
+    * @param String nombre -- El nuevo nombre de la mascota.
+    */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+    /**
+    * Método getPeso que obtiene el peso de la mascota.
+    * @return String peso -- regresa el peso de la mascota. 
+    */
     public String getPeso() {
         return peso;
     }
 
+    /**
+    * Método setPeso que modifica   el nuevo peso de la mascota. 
+    * @param String peso -- el nuevo peso de la mascota 
+    */
     public void setPeso(String peso) {
         this.peso = peso;
     }
 
+    
+   /**
+    * Método getEdad que obtiene la edad de la mascota.
+    * @return String edad -- regresa la edad  de la mascota. 
+    */  
     public String getEdad() {
         return edad;
     }
 
+   /**
+    * Método setEdad que modifica  la edad  de la mascota. 
+    * @param String edad -- modifica la edad de la mascota 
+    */
     public void setEdad(String edad) {
         this.edad = edad;
     }
 
+   /**
+    * Método getFechaNacimiento que obtiene la fecha de nacimiento  de la mascota.
+    * @return String edad -- regresa la edad  de la mascota. 
+    */      
     public String getFechaNacimiento() {
         return FechaNacimiento;
     }
 
+    
+   /**
+    * Método setFechaNacimiento que modifica  la fecha de nacimiento  de la mascota. 
+    * @param FechaNacimiento fechaNacimiento -- modifica la fecha de nacimiento  de la mascota 
+    */
     public void setFechaNacimiento(String fechaNacimiento) {
         FechaNacimiento = fechaNacimiento;
     }
-
+    
+   /**
+    * Método getRaza que obtiene la raza  de la mascota.
+    * @return String raza -- regresa la edad  de la mascota. 
+    */  
     public String getRaza() {
         return raza;
     }
 
+   /**
+    * Método setRaza que modifica  la raza de   de la mascota. 
+    * @param String raza -- modifica la raza de la mascota   de la mascota 
+    */
     public void setRaza(String raza) {
         this.raza = raza;
     }
 
+    
+   /**
+    * Método getIdPersona que obtiene  el identificador del dueño   de la mascota.
+    * @return String IdPersona -- regresa el identificador del dueño   de la mascota. 
+    */ 
     public String getIdPersona() {
         return idPersona;
     }
 
+    
+   /**
+    * Método setIdPersona que modifica  el Id del dueño de la mascota. 
+    * @param String idPersona -- modifica el identificador del dueño de la mascota   
+    */
     public void setIdPersona(String idPersona) {
         this.idPersona = idPersona;
     }
 
+   /**
+    * Método toString que regresa un string que representa a la mascota . 
+    * @return  String modelo de la mascota   
+    */
     @Override
     public String toString() {
         return nombre +","+peso+","+edad+","+FechaNacimiento.toString()+","+raza+","+ idPersona.toString();
