@@ -26,7 +26,7 @@ public class Veterinaria {
     
     
     /**
-     * Constructor por parámetros que genera una Mascota
+     * Constructor por parámetros que genera una Veterinaria
      * @param  nombre -- nombre de la veterinaria 
      * @param  consultorios -- consultorios de la veterinaria 
      * @param  apartado  -- apartado para poder cuidar  a la mascota 
